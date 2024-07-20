@@ -1,9 +1,15 @@
-- button: Ed
-  link: https://ibm.com
-  color: purple
-- button: DataHub
-  link: https://ibm.com
+- button: Quarto
+  link: https://quarto.org
+  color: blue
+- button: Posit
+  link: https://posit.co
+  color: lightblue
+- button: Tidyverse
+  link: https://www.tidyverse.org
   color: green
-- button: Gradescope
-  link: https://ibm.com
+- button: Python
+  link: https://www.python.org
   color: orange
+- button: GitHub
+  link: https://github.com
+  color: black

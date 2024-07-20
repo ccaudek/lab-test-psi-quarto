@@ -1,8 +1,10 @@
-# course-site-quarto
+# lab-test-psi-quarto
 
 ## Laboratorio di Testing Psicologico
 
-Questo repository è sotto version control (mac M1).
+Questo repository è sotto version control sul mac M1.
+
+## Rendering locale
 
 Per creare il sito, usare
 
@@ -25,8 +27,32 @@ Fare dei cambiamenti nei file `.qmd`, salvare, e fare refresh sul file html cons
 
 Per compilare un singolo file `.qmd`, per esempio `homeworks/hw1.qmd`, digitare `quarto render homeworks/hw1.qmd`.
 
+## Pubblicazione
+
+Per pubblicare il progetto Quarto, assicurati di essere nella directory del progetto. 
+
+1. **Renderizza il progetto Quarto**:
+   Renderizza il sito eseguendo il comando:
+
+   ```bash
+   quarto render
+   ```
+
+   Questo comando genererà i file HTML e li posizionerà nella directory `_site`.
+
+2. **Usa `ghp-import` per caricare la directory di output su GitHub Pages**:
+   Esegui il seguente comando, specificando `_site` come directory di input:
+
+   ```bash
+   ghp-import -n -p -f _site
+   ```
+
+   Questo comando importa il contenuto della directory `_site` nel branch `gh-pages` del tuo repository e pubblica il sito su GitHub Pages.
+
 
 ## Template
+
+Per la costruzione del sito ho usato il seguente template. 
 
 This repository contains a Quarto-based template for class website. You can see a preview of it at [https://berkeley-scf.github.io/course-site-quarto](https://berkeley-scf.github.io/course-site-quarto). This template is intended to be forked and altered for other courses.
 

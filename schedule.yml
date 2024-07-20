@@ -1,37 +1,33 @@
 - week: 1
   days:
-    - date: "Aug 24"
+    - date: "Marzo 3"
       items:
         - type: "Lecture"
           id: "1"
           name: Presentazione
           href: "./units/unit0.html"
-          auxil:
-            - id: "Note 1"
-              href: "https://berkeley.edu"
-            - id: "Note 2"
-              href: "https://berkeley.edu"
-        - type: "Participation"
-          id: "1"
-          name: Lecture Participation 1
-          href: "https://berkeley.edu"
-    - date: "Aug 25"
+          # auxil:
+          #   - id: "Note 1"
+          #     href: "https://berkeley.edu"
+          #   - id: "Note 2"
+          #     href: "https://berkeley.edu"
+    - date: "Marzo 6"
       items:
         - type: "Lab"
           id: "1"
-          name: Statistiche descrittive (consegna 5 Marzo)
-          href: "./homeworks/hw1.html"
+          name: Statistiche descrittive
+          href: "./units/unit1.html"
         - type: "Homework"
           id: "1A"
-          name: Plotting and Permutation Test (due Aug 31)
-          href: "https://berkeley.edu"
+          name: Distribuzione normale, asimmetria, curtosi
+          href: "./homeworks/hw1.html"
         - type: "Homework"
           id: "1B"
-          name: Prerequisite Math (due Aug 31)
+          name: Step 1 (Dima, 2018)
           href: "https://berkeley.edu"
 - week: 2
   days:
-    - date: "Aug 29"
+    - date: "Marzo 10"
       items:
         - type: "Lecture"
           id: "2"

@@ -12,7 +12,7 @@ website:
         href: https://github.com/ccaudek/lab-test-psi-quarto
     contents:
       - href: index.qmd
-        text: Home / Schedule
+        text: Home 
       - href: syllabus.qmd
         text: Syllabus
       - href: study_method.qmd
