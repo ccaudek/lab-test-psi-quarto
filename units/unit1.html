@@ -1,0 +1,1898 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>S1: Statistiche descrittive</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../units/unit0.html">Sessioni</a></li><li class="breadcrumb-item"><a href="../units/unit1.html">S1: Statistiche descrittive</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../assets/icon_course.jpeg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">B033300</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/ccaudek/lab-test-psi-quarto" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home / Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../study_method.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Materiali didattici</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exam.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Esame</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../staff.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Docente</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../calendar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Calendario</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Sessioni</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../units/unit0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduzione a R e Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../units/unit1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">S1: Statistiche descrittive</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../units/unit2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit 2: Next</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../units/unit3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit 3: More</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Datasets</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../license.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Licenza</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#preparazione-del-notebook" id="toc-preparazione-del-notebook" class="nav-link active" data-scroll-target="#preparazione-del-notebook">Preparazione del notebook</a></li>
+  <li><a href="#strategie-di-coping-per-genitori-con-figli-oncologici" id="toc-strategie-di-coping-per-genitori-con-figli-oncologici" class="nav-link" data-scroll-target="#strategie-di-coping-per-genitori-con-figli-oncologici">Strategie di Coping per Genitori con Figli Oncologici</a></li>
+  <li><a href="#dati" id="toc-dati" class="nav-link" data-scroll-target="#dati">Dati</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../units/unit0.html">Sessioni</a></li><li class="breadcrumb-item"><a href="../units/unit1.html">S1: Statistiche descrittive</a></li></ol></nav>
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">S1: Statistiche descrittive</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>[UNDER CONSTRUCTION]</p>
+<p>In questa sessione, inizieremo ad affrontare la sequenza di operazioni necessarie per la validazione di un reattivo psicologico, come descritto da:</p>
+<ul>
+<li>Dima, A.L. (2018). <em>Scale validation in applied health research: tutorial for a 6-step R-based psychometrics protocol</em>. Health Psychology and Behavioral Medicine, 6(1), 136-161.</li>
+</ul>
+<p>Il primo passo riguarda le statistiche descrittive, che sarà l’argomento principale di questa sessione. Durante l’incontro, esploreremo i seguenti aspetti:</p>
+<ul>
+<li>Identificazione di item senza o con pochissima variazione.</li>
+<li>Analisi delle differenze tra gli item riguardo alle loro distribuzioni.</li>
+<li>Esame delle correlazioni negative tra gli item.</li>
+<li>Rilevazione di rispondenti con pattern di risposta insoliti.</li>
+</ul>
+<section id="preparazione-del-notebook" class="level2">
+<h2 class="anchored" data-anchor-id="preparazione-del-notebook">Preparazione del notebook</h2>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>({</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(here)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(rio)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">max.print =</span> <span class="dv">1000000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="strategie-di-coping-per-genitori-con-figli-oncologici" class="level2">
+<h2 class="anchored" data-anchor-id="strategie-di-coping-per-genitori-con-figli-oncologici">Strategie di Coping per Genitori con Figli Oncologici</h2>
+<p>In questo laboratorio, utilizzeremo il pool di item relativi allo screening delle famiglie di pazienti oncologici sviluppato dall’equipe di psicologi del Meyer. L’obiettivo è creare un questionario capace di identificare le famiglie con strategie di coping meno efficaci, così da poter fornire il supporto psicologico necessario a quelle che ne hanno più bisogno, considerando le risorse limitate disponibili.</p>
+<p>Importiamo il file che contiene le seguenti informazioni: il contenuto degli item, il codice di ciascun item, l’area tematica di appartenenza e la sottoscala di ciascun item.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>items <span class="ot">&lt;-</span> rio<span class="sc">::</span><span class="fu">import</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"aree_tematiche_items.csv"</span>))</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>items<span class="sc">$</span>Area <span class="ot">&lt;-</span> <span class="fu">factor</span>(items<span class="sc">$</span>Area)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>items<span class="sc">$</span>Subscale <span class="ot">&lt;-</span> <span class="fu">factor</span>(items<span class="sc">$</span>Subscale)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(items)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 197
+Columns: 4
+$ Item_Code   &lt;chr&gt; "i49", "i175", "i106", "i60", "i124", "i86", "i152", "i1",…
+$ Description &lt;chr&gt; "1.&nbsp;&nbsp;&nbsp;&nbsp; Mio figlio ha difficoltà, temporanee o permanenti,…
+$ Area        &lt;fct&gt; AREA 1: CARATTERISTICHE DEL BAMBINO, AREA 1: CARATTERISTIC…
+$ Subscale    &lt;fct&gt; FUNZIONAMENTO, FUNZIONAMENTO, FUNZIONAMENTO, FUNZIONAMENTO…</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(items<span class="sc">$</span>Area)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>  AREA 1: CARATTERISTICHE DEL BAMBINO       AREA 2: RICHIESTE DI CAREGIVING 
+                                   22                                    34 
+AREA 3: PERCEZIONE DELLA CURA FORMALE         AREA 4: FATTORI INTRAPSICHICI 
+                                   21                                    32 
+                       AREA 5: COPING                AREA 6: IPERPROTEZIONE 
+                                   57                                    16 
+                     AREA 7: FRATELLI 
+                                   15 </code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(items<span class="sc">$</span>Subscale)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>                                      ASSISTENZA FISICA/MEDICA 
+                                                             8 
+                                                     AUTOSTIMA 
+                                                             7 
+                                                CARICO EMOTIVO 
+                                                            31 
+                                        COGNIZIONE DI MALATTIA 
+                                                            18 
+CONFLITTO TRA RUOLO DI CAREGIVERE E RUOLO SOCIALE E LAVORATIVO 
+                                                             9 
+                                                 FUNZIONAMENTO 
+                                                             5 
+                                       FUNZIONAMENTO FAMILIARE 
+                                                            73 
+PERCEZIONE DI VULNERABILITA’ DEL BAMBINO DA PARTE DEL GENITORE 
+                                                             6 
+                    PREOCCUPAZIONI GENITORIALI PER LA MALATTIA 
+                                                             7 
+                                      PROBLEMI COMPORTAMENTALI 
+                                                            11 
+                                           SENSO DI PADRONANZA 
+                                                             7 
+                                              SUPPORTO SOCIALE 
+                                                            15 </code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>items<span class="sc">$</span>Description</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>  [1] "1.&nbsp;&nbsp;&nbsp;&nbsp; Mio figlio ha difficoltà, temporanee o permanenti, a livello motorio"                                                                                                  
+  [2] "2.&nbsp;&nbsp;&nbsp;&nbsp; Mio figlio ha difficoltà intellettive"                                                                                                                                 
+  [3] "3.&nbsp;&nbsp;&nbsp;&nbsp; Mio figlio ha sintomi (es. dolore) che lo limitano nelle sue attività quotidiane"                                                                                      
+  [4] "4.&nbsp;&nbsp;&nbsp;&nbsp; A causa della sua condizione di salute (difficoltà o sintomi legati alla malattia), mio figlio necessita di supporto nello svolgimento delle attività quotidiane"      
+  [5] "5.&nbsp;&nbsp;&nbsp;&nbsp; La condizione di salute di mio figlio (difficoltà o sintomi legati alla malattia) lo limita nello svolgimento delle attività"                                          
+  [6] "6.&nbsp;&nbsp;&nbsp;&nbsp; Mio figlio è irritabile"                                                                                                                                               
+  [7] "7.&nbsp;&nbsp;&nbsp;&nbsp; Mio figlio ha comportamenti aggressivi verso persone, animali o cose"                                                                                                  
+  [8] "8.&nbsp;&nbsp;&nbsp;&nbsp; Mio figlio si mette in situazioni di pericolo"                                                                                                                         
+  [9] "9.&nbsp;&nbsp;&nbsp;&nbsp; Mio figlio è in grado di mantenere l’attenzione su un’attività per più tempo"                                                                                          
+ [10] "10.&nbsp;&nbsp; Mio figlio è triste"                                                                                                                                                    
+ [11] "11.&nbsp;&nbsp; Mio figlio si isola"                                                                                                                                                    
+ [12] "12.&nbsp;&nbsp; Mio figlio ha un rapporto equilibrato col cibo"                                                                                                                         
+ [13] "13.&nbsp;&nbsp; Mio figlio ha un sonno disturbato"                                                                                                                                      
+ [14] "14.&nbsp;&nbsp; Mio figlio è sereno quando è lontano dai suoi genitori"                                                                                                                 
+ [15] "15.&nbsp;&nbsp; Mio figlio ha sintomi fisici senza una causa medica (es. dolore in alcune parti del corpo, diarrea, nausea, stanchezza, problemi alla vista, sfoghi cutanei, vertigini)"
+ [16] "16.&nbsp;&nbsp; Mio figlio si relaziona con i coetanei senza difficoltà"                                                                                                                
+ [17] "17.&nbsp;&nbsp; Credo che mio figlio si ammali più facilmente dei suoi coetanei"                                                                                                        
+ [18] "18.&nbsp;&nbsp; Credo che a mio figlio accadano più cose negative che ai suoi coetanei"                                                                                                 
+ [19] "19.&nbsp;&nbsp; Credo che mio figlio abbia la stessa energia dei suoi coetanei"                                                                                                         
+ [20] "20.&nbsp;&nbsp; Credo che mio figlio sia in grado di superare le situazioni difficili"                                                                                                  
+ [21] "21.&nbsp;&nbsp; Mi preoccupo che i problemi di salute di mio figlio possano influenzare negativamente il suo futuro"                                                                    
+ [22] "22.&nbsp;&nbsp; Credo che mio figlio recuperi facilmente dopo un problema di salute"                                                                                                    
+ [23] "23.&nbsp;&nbsp; Nonostante la malattia di mio figlio, ho tempo per me"                                                                                                                  
+ [24] "24.&nbsp;&nbsp; La mia vita vale la pena di essere vissuta"                                                                                                                             
+ [25] "25.&nbsp;&nbsp; Riesco a svolgere bene la mia attività lavorativa"                                                                                                                      
+ [26] "26.&nbsp;&nbsp; La mia famiglia ha difficoltà economiche emerse in seguito alla malattia di mio figlio"                                                                                 
+ [27] "27.&nbsp;&nbsp; La malattia di mio figlio limita la mia vita"                                                                                                                           
+ [28] "28.&nbsp;&nbsp; Riesco ad integrare gli impegni di lavoro con la cura di mio figlio"                                                                                                    
+ [29] "29.&nbsp;&nbsp; Mi crea disagio integrare gli impegni di lavoro con la cura di mio figlio"                                                                                              
+ [30] "30.&nbsp;&nbsp; Sento di avere un posto nella società"                                                                                                                                  
+ [31] "31.&nbsp;&nbsp; Quando non sono con mio figlio mi sembra di perdere tempo"                                                                                                              
+ [32] "32.&nbsp;&nbsp; Mi occupo dell’igiene personale di mio figlio"                                                                                                                          
+ [33] "33.&nbsp;&nbsp; Mi occupo di gestire la routine medica di mio figlio (terapie mediche, visite, ecc.)"                                                                                   
+ [34] "34.&nbsp;&nbsp; Mi occupo della gestione dei dispositivi medici di mio figlio (es. accessi venosi, respiratori, ecc.)"                                                                  
+ [35] "35.&nbsp;&nbsp; Resto accanto a mio figlio durante le procedure mediche (es. prelievo, iniezioni, ecc.)"                                                                                
+ [36] "36.&nbsp;&nbsp; Mi occupo di sostenere mio figlio nelle attività quotidiane (es. vestirsi, alimentarsi, andare in bagno, ecc.)"                                                         
+ [37] "37.&nbsp;&nbsp; Mi capita di dover assistere mio figlio durante la notte"                                                                                                               
+ [38] "38.&nbsp;&nbsp; Mi trovo ad affrontare eventi inattesi legati alla malattia di mio figlio"                                                                                              
+ [39] "39.&nbsp;&nbsp; Prendere decisioni sulle cure di mio figlio è per me stressante"                                                                                                        
+ [40] "40.&nbsp;&nbsp; Sono preoccupato per la malattia di mio figlio"                                                                                                                         
+ [41] "41.&nbsp;&nbsp; Ho paura di perdere mio figlio a causa della sua malattia"                                                                                                              
+ [42] "42.&nbsp;&nbsp; Sono preoccupato per gli effetti collaterali che i trattamenti farmacologici potrebbero avere su mio figlio"                                                            
+ [43] "43.&nbsp;&nbsp; Sono preoccupato per gli effetti a lungo termine che i trattamenti farmacologici potrebbero avere su mio figlio"                                                        
+ [44] "44.&nbsp;&nbsp; Ho paura che la malattia di mio figlio peggiori"                                                                                                                        
+ [45] "45.&nbsp;&nbsp; Mi preoccupo che la malattia di mio figlio possa colpire un altro membro della famiglia"                                                                                
+ [46] "46.&nbsp;&nbsp; Sono preoccupato che la malattia di mio figlio possa avere delle conseguenze sugli altri membri della famiglia"                                                         
+ [47] "47.&nbsp;&nbsp; Capita che assistere mio figlio mi irriti"                                                                                                                              
+ [48] "48.&nbsp;&nbsp; I rapporti con i medici sono per me stressanti"                                                                                                                         
+ [49] "49.&nbsp;&nbsp; La malattia di mio figlio mi provoca stanchezza"                                                                                                                        
+ [50] "50.&nbsp;&nbsp; Ho l’impressione di non farcela ad affrontare tutti i problemi che ho"                                                                                                  
+ [51] "51.&nbsp;&nbsp; Quando penso alla condizione di salute di mio figlio ho difficoltà a contenere la rabbia"                                                                               
+ [52] "52.&nbsp;&nbsp; Provo rabbia quando penso alla malattia di mio figlio"                                                                                                                  
+ [53] "53.&nbsp;&nbsp; Provo invidia verso i genitori che hanno figli sani"                                                                                                                    
+ [54] "54.&nbsp;&nbsp; Provo invidia verso i genitori che hanno figli con una malattia meno grave rispetto a mio figlio"                                                                       
+ [55] "55.&nbsp;&nbsp; Le responsabilità di genitore mi fanno sentire in trappola"                                                                                                             
+ [56] "56.&nbsp;&nbsp; Mi capita di sentirmi a disagio quando esco con mio figlio"                                                                                                             
+ [57] "57.&nbsp;&nbsp; Il personale sanitario è rispettoso verso la mia famiglia"                                                                                                              
+ [58] "58.&nbsp;&nbsp; Mi sento ascoltato dal personale sanitario"                                                                                                                             
+ [59] "59.&nbsp;&nbsp; Il personale sanitario ascolta le richieste di mio figlio"                                                                                                              
+ [60] "60.&nbsp;&nbsp; Mi sento discriminato dal personale sanitario per una caratteristica della mia famiglia (es. etnia, cultura, provenienza territoriale, religione, ecc.)"                
+ [61] "61.&nbsp;&nbsp; Mi sento supportato dal personale sanitario nella gestione della malattia di mio figlio, anche in situazioni difficili"                                                 
+ [62] "62.&nbsp;&nbsp; Mi sento apprezzato nel mio ruolo di genitore da parte del personale sanitario"                                                                                         
+ [63] "63.&nbsp;&nbsp; Mi sento supportato nel mio ruolo di genitore da parte del personale sanitario"                                                                                         
+ [64] "64.&nbsp;&nbsp; Mi sento supportato dal personale sanitario nella gestione dei medicamenti/presidi medici"                                                                              
+ [65] "65.&nbsp;&nbsp; Il personale sanitario mi informa adeguatamente sulla salute di mio figlio"                                                                                             
+ [66] "66.&nbsp;&nbsp; Il personale sanitario mi aiuta nelle scelte riguardanti la salute di mio figlio"                                                                                       
+ [67] "67.&nbsp;&nbsp; Sento di poter parlare con i medici dei miei dubbi sulle condizioni mediche di mio figlio"                                                                              
+ [68] "68.&nbsp;&nbsp; Il personale sanitario è flessibile rispetto alle esigenze della mia famiglia"                                                                                          
+ [69] "69.&nbsp;&nbsp; Sento che il personale sanitario mi da tutte le informazioni sulla salute di mio figlio"                                                                                
+ [70] "70.&nbsp;&nbsp; Il personale sanitario è sincero con me"                                                                                                                                
+ [71] "71.&nbsp;&nbsp; Mi fido del personale sanitario che segue mio figlio"                                                                                                                   
+ [72] "72.&nbsp;&nbsp; Ho difficoltà a parlare con i medici"                                                                                                                                   
+ [73] "73.&nbsp;&nbsp; La struttura ospedaliera ostacola il contatto tra famiglie"                                                                                                             
+ [74] "74.&nbsp;&nbsp; Mi sento coinvolto dal personale sanitario nel percorso di cura di mio figlio"                                                                                          
+ [75] "75.&nbsp;&nbsp; Il personale sanitario non si prende adeguatamente cura di mio figlio"                                                                                                  
+ [76] "76.&nbsp;&nbsp; In ospedale fanno tutto il possibile affinché mio figlio stia meglio"                                                                                                   
+ [77] "77.&nbsp;&nbsp; L’ospedale ha in mente l’interesse della mia famiglia"                                                                                                                  
+ [78] "78.&nbsp;&nbsp; Ho una visione positiva di me"                                                                                                                                          
+ [79] "79.&nbsp;&nbsp; Ho rispetto per me stesso"                                                                                                                                              
+ [80] "80.&nbsp;&nbsp; Penso di meritarmi l’affetto degli altri"                                                                                                                               
+ [81] "81.&nbsp;&nbsp; Ho fiducia in me stesso"                                                                                                                                                
+ [82] "82.&nbsp;&nbsp; So prendermi cura dei miei figli"                                                                                                                                       
+ [83] "83.&nbsp;&nbsp; Credo di essere una buona guida per mio figlio"                                                                                                                         
+ [84] "84.&nbsp;&nbsp; Mi sento un buon genitore"                                                                                                                                              
+ [85] "85.&nbsp;&nbsp; Sento di avere le risorse necessarie per affrontare le sfide della vita"                                                                                                
+ [86] "86.&nbsp;&nbsp; Sento di potercela fare anche quando tutto sembra difficile"                                                                                                            
+ [87] "87.&nbsp;&nbsp; Di fronte ai problemi riesco a trovare una soluzione"                                                                                                                   
+ [88] "88.&nbsp;&nbsp; Riesco a gestire le necessità di mio figlio"                                                                                                                            
+ [89] "89.&nbsp;&nbsp; Riesco a sopportare la situazione quando mio figlio sta male"                                                                                                           
+ [90] "90.&nbsp;&nbsp; Credo di contribuire positivamente al benessere di mio figlio"                                                                                                          
+ [91] "91.&nbsp;&nbsp; Mi sento inutile quando mi prendo cura di mio figlio"                                                                                                                   
+ [92] "92.&nbsp;&nbsp; Penso al perché la malattia ha colpito mio figlio"                                                                                                                      
+ [93] "93.&nbsp;&nbsp; Vivo la malattia di mio figlio come qualcosa di irreale"                                                                                                                
+ [94] "94.&nbsp;&nbsp; Penso sia ingiusto che mio figlio si sia ammalato"                                                                                                                      
+ [95] "95.&nbsp;&nbsp; Accetto il fatto che mio figlio sia malato"                                                                                                                             
+ [96] "96.&nbsp;&nbsp; Eventi come la malattia di mio figlio fanno parte della vita"                                                                                                           
+ [97] "97.&nbsp;&nbsp; Non accetto che mio figlio si sia ammalato"                                                                                                                             
+ [98] "98.&nbsp;&nbsp; Accetto gli aspetti della malattia che non si possono controllare"                                                                                                      
+ [99] "99.&nbsp;&nbsp; Mi sento responsabile per la condizione di salute di mio figlio"                                                                                                        
+[100] "100.Accetto che mio figlio debba convivere con la sua malattia e le possibili conseguenze"                                                                                    
+[101] "101.L’esperienza della malattia di mio figlio mi fa crescere come persona"                                                                                                    
+[102] "102.La malattia di mio figlio mi aiuta a capire quali sono le cose importanti della vita"                                                                                     
+[103] "103.La malattia di mio figlio mi insegna a godere di più del momento presente"                                                                                                
+[104] "104.La malattia di mio figlio mi fa vedere nuovi aspetti positivi della vita"                                                                                                 
+[105] "105.Penso di poter contribuire nella gestione della malattia di mio figlio"                                                                                                   
+[106] "106.Considero la malattia di mio figlio come un fallimento personale"                                                                                                         
+[107] "107.La malattia di mio figlio controlla la mia vita"                                                                                                                          
+[108] "108.Penso che la malattia di mio figlio sia incontrollabile in tutti i suoi aspetti"                                                                                          
+[109] "109.Penso che le cose che faccio per mio figlio gli siano utili"                                                                                                              
+[110] "110.Quando ne ho bisogno ricevo aiuto concreto"                                                                                                                               
+[111] "111. In caso di emergenza ricevo l’aiuto di cui ho bisogno"                                                                                                                   
+[112] "112. Ho persone con cui poter condividere liberamente i miei stati d’animo e problemi"                                                                                        
+[113] "113. Quando ho bisogno di un consiglio ho persone a cui rivolgermi"                                                                                                           
+[114] "114. Non parlo dei miei problemi perché nessuno è in grado di aiutarmi"                                                                                                       
+[115] "115. Se avessi bisogno di confrontarmi con qualcuno che affronta situazioni simili alle mie saprei a chi rivolgermi"                                                          
+[116] "116. Sento l’affetto delle persone a cui voglio bene"                                                                                                                         
+[117] "117. Quando mi sento solo so di poter contare su qualcuno"                                                                                                                    
+[118] "118. Le persone che mi stanno intorno non mi considerano come vorrei"                                                                                                         
+[119] "119. Ho persone con cui posso trascorrere il tempo libero"                                                                                                                    
+[120] "120. Quando mi sfogo e racconto i miei stati d’animo, mi sento ascoltato e compreso"                                                                                          
+[121] "121. Sento che gli altri rispettano i miei sentimenti"                                                                                                                        
+[122] "122. Mi sento apprezzato dalle persone"                                                                                                                                       
+[123] "123. Ricevo dagli altri l’affetto di cui ho bisogno"                                                                                                                          
+[124] "124.Sento che persone che considero amiche si stanno allontanando"                                                                                                            
+[125] "125.In famiglia ognuno si interessa di ciò che accade agli altri"                                                                                                             
+[126] "126.In famiglia è difficile dimostrare apertamente l’affetto reciproco"                                                                                                       
+[127] "127.In famiglia ognuno prende decisioni in autonomia, senza condividerle con gli altri"                                                                                       
+[128] "128.Qualsiasi difficoltà abbia un familiare, anche minima, diventa la priorità della famiglia"                                                                                
+[129] "129.Non mi trovo bene con nessun altro come con i miei familiari"                                                                                                             
+[130] "130.La mia famiglia è tutto ciò che serve per essere completamente felici, il resto non è indispensabile"                                                                     
+[131] "131.Rinuncio ai miei desideri per accontentare i miei familiari"                                                                                                              
+[132] "132.Penso che sia giusto essere amici dei figli"                                                                                                                              
+[133] "133.Quando siamo lontani, io e i miei familiari ci sentiamo persi"                                                                                                            
+[134] "134.In famiglia quando qualcuno è triste cerchiamo di sostenerlo"                                                                                                             
+[135] "135.Di fronte alle difficoltà la mia famiglia rimane unita"                                                                                                                   
+[136] "136.In casa ognuno rispetta gli spazi e le cose degli altri"                                                                                                                  
+[137] "137.In famiglia non permettiamo ai figli di discutere le decisioni che li riguardano"                                                                                         
+[138] "138.In famiglia le decisioni vengono prese da un unico adulto"                                                                                                                
+[139] "139.Le regole della famiglia possono essere modificate"                                                                                                                       
+[140] "140.In famiglia non ci sono regole fisse"                                                                                                                                     
+[141] "141.In famiglia non c’è una persona di riferimento"                                                                                                                           
+[142] "142.In famiglia le decisioni vengono cambiate continuamente in base alle richieste di ogni membro"                                                                            
+[143] "143.In famiglia non abbiamo ruoli chiari e definiti"                                                                                                                          
+[144] "144.Nella mia famiglia i figli riescono a comandare"                                                                                                                          
+[145] "145.In famiglia i figli rispettano le punizioni"                                                                                                                              
+[146] "146.In famiglia le decisioni che riguardano tutti vengono condivise con i figli"                                                                                              
+[147] "147.In famiglia quando organizziamo il tempo libero teniamo in considerazione le preferenze dei figli"                                                                        
+[148] "148.Ricevo supporto dal mio partner o altri membri adulti della mia famiglia"                                                                                                 
+[149] "149.Mi sento in sintonia con la mia famiglia"                                                                                                                                 
+[150] "150.Mi piace la mia famiglia"                                                                                                                                                 
+[151] "151.Sento di poter contare sulla mia famiglia"                                                                                                                                
+[152] "152.In famiglia quando parliamo ciascuno si interessa a ciò che gli altri hanno da dire"                                                                                      
+[153] "153.In famiglia riusciamo a parlare delle nostre emozioni"                                                                                                                    
+[154] "154.In famiglia condividiamo preoccupazioni e ansie"                                                                                                                          
+[155] "155.In famiglia non ci capiamo"                                                                                                                                               
+[156] "156.In famiglia ci accorgiamo cosa pensano e come si sentono gli altri senza bisogno di parlare"                                                                              
+[157] "157.In famiglia scherziamo tra di noi"                                                                                                                                        
+[158] "158.In famiglia ci confrontiamo su qualsiasi argomento"                                                                                                                       
+[159] "159.In famiglia ci critichiamo"                                                                                                                                               
+[160] "160.In famiglia discutiamo in modo acceso"                                                                                                                                    
+[161] "161.In famiglia si accettano le opinioni di tutti, anche quando sono contrapposte"                                                                                            
+[162] "162.In famiglia troviamo tempo per parlare"                                                                                                                                   
+[163] "163.In famiglia riteniamo importante proteggere mio figlio, tacendo su alcuni aspetti della sua malattia"                                                                     
+[164] "164.In famiglia quando parliamo a mio figlio della malattia, modifichiamo le informazioni"                                                                                    
+[165] "165.In famiglia incoraggiamo mio figlio a fare domande sulla sua malattia"                                                                                                    
+[166] "166.In famiglia ci è difficile parlare della malattia di mio figlio"                                                                                                          
+[167] "167.Controllo che mio figlio faccia le cose come gli ho insegnato"                                                                                                            
+[168] "168.Mi capita di rifare le cose fatte da mio figlio perché non vanno bene"                                                                                                    
+[169] "169.Scelgo per mio figlio le amicizie più adatte a lui"                                                                                                                       
+[170] "170.Allontanarmi da mio figlio mi crea disagio"                                                                                                                               
+[171] "171.Quando sono lontano da mio figlio mi chiedo di continuo se va tutto bene"                                                                                                 
+[172] "172.Quando non ci sono, affido con serenità mio figlio ad altre persone"                                                                                                      
+[173] "173.Incoraggio mio figlio a fare le cose senza di me"                                                                                                                         
+[174] "174.Mi spaventa l’idea che mio figlio un giorno possa non avere più bisogno di me come adesso"                                                                                
+[175] "175.Mi piace quando mio figlio viene a chiedermi aiuto"                                                                                                                       
+[176] "176.Non perdo mai di vista mio figlio"                                                                                                                                        
+[177] "177.Quando mio figlio è con gli amici preferisco essere presente"                                                                                                             
+[178] "178.Ho bisogno di sapere tutto ciò che fa mio figlio quando non ci sono"                                                                                                      
+[179] "179.A causa della malattia di mio figlio, sono più protettivo"                                                                                                                
+[180] "180.Data la malattia di mio figlio, vorrei trascorrere tutto il tempo con lui"                                                                                                
+[181] "181.A causa della malattia di mio figlio, faccio fatica a stargli vicino"                                                                                                     
+[182] "182.Permetto a mio figlio di condividere con gli altri gli aspetti legati alla sua malattia"                                                                                  
+[183] "183.Se possibile, sono disponibile a portare i fratelli con mio figlio quando si trova in ospedale per ricoveri o visite"                                                     
+[184] "184.I fratelli conoscono lo stato di salute di mio figlio"                                                                                                                    
+[185] "185.In famiglia riteniamo importante proteggere i fratelli, tacendo su alcuni aspetti della malattia di mio figlio"                                                           
+[186] "186.In famiglia parliamo ai fratelli della malattia di mio figlio"                                                                                                            
+[187] "187.In famiglia quando parliamo ai fratelli della malattia di mio figlio, modifichiamo le informazioni"                                                                       
+[188] "188.Sento di non essere presente come vorrei nella vita degli altri figli"                                                                                                    
+[189] "189.Sono soddisfatto del rapporto che ho con gli altri figli"                                                                                                                 
+[190] "190.La vita degli altri figli è cambiata in modo negativo"                                                                                                                    
+[191] "191.Riesco a prendermi cura degli altri figli come del fratello malato"                                                                                                       
+[192] "192. Presto attenzione alle emozioni che gli altri figli provano verso il fratello malato"                                                                                    
+[193] "193. Quando mi concentro sulla cura di mio figlio ho in mente anche le esigenze dei fratelli"                                                                                 
+[194] "194.Per prendermi cura di mio figlio, sento di aver messo da parte i fratelli"                                                                                                
+[195] "195.Incoraggio la vicinanza tra mio figlio e i suoi fratelli"                                                                                                                 
+[196] "196.Rendo partecipi i fratelli nella cura di mio figlio come desiderano, rispettando eventuali limiti o difficoltà"                                                           
+[197] "197.Mi è difficile conciliare le esigenze di mio figlio con quelle dei fratelli"                                                                                              </code></pre>
+</div>
+</div>
+</section>
+<section id="dati" class="level2">
+<h2 class="anchored" data-anchor-id="dati">Dati</h2>
+<p>Importiamo i dati e stampiamo i nomi delle variabili contenuti nell’oggetto <code>complete_data</code>.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>destfile <span class="ot">&lt;-</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"fai_2022_11_20.rds"</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>complete_data <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(destfile)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Add random idx for each participant.</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>complete_data<span class="sc">$</span>idx <span class="ot">&lt;-</span> ids<span class="sc">::</span><span class="fu">random_id</span>(<span class="fu">nrow</span>(complete_data), <span class="dv">4</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(complete_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>  [1] "id1"                        "id2"                       
+  [3] "date_code"                  "child_birthdate"           
+  [5] "child_nationality_code"     "child_birth_place_code"    
+  [7] "kind_of_chronic_disease"    "mother_nationality_code"   
+  [9] "mother_marital_status"      "mother_job_code"           
+ [11] "mother_194"                 "father_nationality_code"   
+ [13] "father_marital_status"      "father_job_code"           
+ [15] "address_other_region"       "other"                     
+ [17] "other_code"                 "relationship"              
+ [19] "child_age"                  "child_sex"                 
+ [21] "child_birth_place"          "has_chronic_disease"       
+ [23] "has_other_problems"         "has_other_chronic_disease" 
+ [25] "has_psychological_problems" "hospitalization"           
+ [27] "hospitalization_number"     "has_emergency_care"        
+ [29] "emergency_care_number"      "mother_age"                
+ [31] "mother_education"           "mother_job"                
+ [33] "father_age"                 "father_education"          
+ [35] "father_job"                 "father_194"                
+ [37] "address"                    "social_services"           
+ [39] "death_loved_one"            "divorce"                   
+ [41] "bad_health"                 "job_change"                
+ [43] "low_income"                 "change_address"            
+ [45] "change_city"                "is_mother_italian"         
+ [47] "is_father_italian"          "is_mother_working"         
+ [49] "is_father_working"          "life_events"               
+ [51] "is_child_female"            "is_child_italian"          
+ [53] "siblings"                   "death_risk"                
+ [55] "FAI_1"                      "FAI_2"                     
+ [57] "FAI_3"                      "FAI_4"                     
+ [59] "FAI_5"                      "FAI_6"                     
+ [61] "FAI_7"                      "FAI_8"                     
+ [63] "FAI_9"                      "FAI_10"                    
+ [65] "FAI_11"                     "FAI_12"                    
+ [67] "FAI_13"                     "FAI_14"                    
+ [69] "FAI_15"                     "FAI_16"                    
+ [71] "FAI_18"                     "FAI_19"                    
+ [73] "FAI_20"                     "FAI_21"                    
+ [75] "FAI_22"                     "FAI_23"                    
+ [77] "FAI_24"                     "FAI_25"                    
+ [79] "FAI_26"                     "FAI_27"                    
+ [81] "FAI_28"                     "FAI_29"                    
+ [83] "FAI_30"                     "FAI_31"                    
+ [85] "FAI_32"                     "FAI_33"                    
+ [87] "FAI_34"                     "FAI_35"                    
+ [89] "FAI_36"                     "FAI_38"                    
+ [91] "FAI_39"                     "FAI_40"                    
+ [93] "FAI_41"                     "FAI_42"                    
+ [95] "FAI_43"                     "FAI_44"                    
+ [97] "FAI_45"                     "FAI_46"                    
+ [99] "FAI_47"                     "FAI_48"                    
+[101] "FAI_49"                     "FAI_50"                    
+[103] "FAI_51"                     "FAI_52"                    
+[105] "FAI_53"                     "FAI_54"                    
+[107] "FAI_56"                     "FAI_57"                    
+[109] "FAI_58"                     "FAI_59"                    
+[111] "FAI_60"                     "FAI_61"                    
+[113] "FAI_62"                     "FAI_63"                    
+[115] "FAI_64"                     "FAI_65"                    
+[117] "FAI_66"                     "FAI_67"                    
+[119] "FAI_68"                     "FAI_69"                    
+[121] "FAI_70"                     "FAI_71"                    
+[123] "FAI_72"                     "FAI_73"                    
+[125] "FAI_74"                     "FAI_75"                    
+[127] "FAI_76"                     "FAI_77"                    
+[129] "FAI_79"                     "FAI_80"                    
+[131] "FAI_81"                     "FAI_82"                    
+[133] "FAI_83"                     "FAI_85"                    
+[135] "FAI_86"                     "FAI_87"                    
+[137] "FAI_88"                     "FAI_89"                    
+[139] "FAI_90"                     "FAI_91"                    
+[141] "FAI_92"                     "FAI_93"                    
+[143] "FAI_94"                     "FAI_95"                    
+[145] "FAI_96"                     "FAI_97"                    
+[147] "FAI_98"                     "FAI_99"                    
+[149] "FAI_100"                    "FAI_101"                   
+[151] "FAI_102"                    "FAI_103"                   
+[153] "FAI_104"                    "FAI_105"                   
+[155] "FAI_106"                    "FAI_107"                   
+[157] "FAI_108"                    "FAI_111"                   
+[159] "FAI_112"                    "FAI_113"                   
+[161] "FAI_114"                    "FAI_115"                   
+[163] "FAI_116"                    "FAI_117"                   
+[165] "FAI_118"                    "FAI_119"                   
+[167] "FAI_120"                    "FAI_121"                   
+[169] "FAI_122"                    "FAI_124"                   
+[171] "FAI_125"                    "FAI_127"                   
+[173] "FAI_128"                    "FAI_129"                   
+[175] "FAI_130"                    "FAI_131"                   
+[177] "FAI_132"                    "FAI_133"                   
+[179] "FAI_134"                    "FAI_135"                   
+[181] "FAI_136"                    "FAI_137"                   
+[183] "FAI_138"                    "FAI_139"                   
+[185] "FAI_140"                    "FAI_141"                   
+[187] "FAI_142"                    "FAI_143"                   
+[189] "FAI_144"                    "FAI_145"                   
+[191] "FAI_146"                    "FAI_148"                   
+[193] "FAI_149"                    "FAI_151"                   
+[195] "FAI_152"                    "FAI_153"                   
+[197] "FAI_154"                    "FAI_155"                   
+[199] "FAI_156"                    "FAI_157"                   
+[201] "FAI_159"                    "FAI_160"                   
+[203] "FAI_161"                    "FAI_162"                   
+[205] "FAI_163"                    "FAI_164"                   
+[207] "FAI_165"                    "FAI_166"                   
+[209] "FAI_167"                    "FAI_168"                   
+[211] "FAI_169"                    "FAI_170"                   
+[213] "FAI_172"                    "FAI_173"                   
+[215] "FAI_174"                    "FAI_175"                   
+[217] "FAI_176"                    "FAI_177"                   
+[219] "FAI_178"                    "FAI_179"                   
+[221] "FAI_180"                    "FAI_181"                   
+[223] "FAI_182"                    "FAI_183"                   
+[225] "FAI_185"                    "FAI_186"                   
+[227] "FAI_187"                    "FAI_189"                   
+[229] "FAI_190"                    "FAI_191"                   
+[231] "FAI_192"                    "FAI_193"                   
+[233] "FAI_194"                    "FAI_195"                   
+[235] "FAI_196"                    "FAI_197"                   
+[237] "FLAG"                       "idx"                       </code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(complete_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 494 238</code></pre>
+</div>
+</div>
+<p>Rimuoviamo i partecipanti con la FLAG del <em>careless responding</em>.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>temp <span class="ot">&lt;-</span> complete_data <span class="sc">|&gt;</span> </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(FLAG <span class="sc">==</span> <span class="st">"keep"</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>temp<span class="sc">$</span>FLAG <span class="ot">&lt;-</span> <span class="cn">NULL</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(temp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 453 237</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>items_df <span class="ot">&lt;-</span> temp <span class="sc">%&gt;%</span> </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"FAI_"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Tutti gli item sono stati inizialmente esaminati per verificarne la normalità, seguendo le raccomandazioni secondo cui i valori di skewness degli item non dovrebbero superare 2 o 3 e i valori di kurtosis non dovrebbero superare 7 o 8 (Curran et al., 1996; Finney &amp; DiStefano, 2006).</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>items_stats <span class="ot">&lt;-</span> psych<span class="sc">::</span><span class="fu">describe</span>(items_df)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>items_stats</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>        vars   n mean   sd median trimmed  mad min max range  skew kurtosis
+FAI_1      1 453 0.45 0.75      0    0.29 0.00   0   4     4  1.86     3.72
+FAI_2      2 453 0.86 1.06      1    0.68 1.48   0   4     4  1.15     0.56
+FAI_3      3 453 1.57 1.02      2    1.53 1.48   0   4     4  0.31    -0.28
+FAI_4      4 453 1.42 1.26      1    1.29 1.48   0   4     4  0.54    -0.73
+FAI_5      5 453 1.01 1.18      1    0.83 1.48   0   4     4  1.04     0.12
+FAI_6      6 453 0.97 0.98      1    0.86 1.48   0   4     4  0.81     0.08
+FAI_7      7 453 0.71 1.01      0    0.52 0.00   0   4     4  1.50     1.74
+FAI_8      8 453 1.44 0.99      1    1.39 1.48   0   4     4  0.39    -0.06
+FAI_9      9 453 2.51 0.88      3    2.52 1.48   0   4     4 -0.27    -0.17
+FAI_10    10 453 1.59 0.93      2    1.58 1.48   0   4     4  0.31    -0.19
+FAI_11    11 453 1.98 1.38      2    1.98 1.48   0   4     4  0.09    -1.27
+FAI_12    12 453 0.63 0.87      0    0.48 0.00   0   4     4  1.30     0.99
+FAI_13    13 453 0.57 0.89      0    0.39 0.00   0   4     4  1.75     2.95
+FAI_14    14 453 2.23 1.20      2    2.25 1.48   0   4     4 -0.05    -0.99
+FAI_15    15 453 1.14 1.14      1    0.99 1.48   0   4     4  0.82    -0.11
+FAI_16    16 453 1.34 0.99      1    1.28 1.48   0   4     4  0.37    -0.38
+FAI_18    17 453 1.62 1.13      2    1.58 1.48   0   4     4  0.26    -0.63
+FAI_19    18 453 1.19 1.12      1    1.07 1.48   0   4     4  0.72    -0.33
+FAI_20    19 453 0.73 1.14      0    0.47 0.00   0   4     4  1.60     1.59
+FAI_21    20 453 0.78 0.94      1    0.62 1.48   0   4     4  1.23     1.06
+FAI_22    21 453 1.82 0.89      2    1.81 1.48   0   4     4  0.10     0.09
+FAI_23    22 453 2.28 1.03      2    2.29 1.48   0   4     4 -0.18    -0.45
+FAI_24    23 453 0.26 0.66      0    0.11 0.00   0   4     4  3.19    12.05
+FAI_25    24 453 2.39 1.28      2    2.44 1.48   0   4     4 -0.13    -1.22
+FAI_26    25 453 2.22 1.26      2    2.27 1.48   0   4     4 -0.08    -1.04
+FAI_27    26 453 1.54 1.11      1    1.48 1.48   0   4     4  0.39    -0.55
+FAI_28    27 453 1.09 0.96      1    0.99 1.48   0   4     4  0.68    -0.01
+FAI_29    28 453 0.74 1.11      0    0.49 0.00   0   4     4  1.56     1.56
+FAI_30    29 453 2.20 1.29      2    2.23 1.48   0   4     4  0.02    -1.17
+FAI_31    30 453 1.71 1.08      2    1.67 1.48   0   4     4  0.39    -0.47
+FAI_32    31 453 0.09 0.38      0    0.00 0.00   0   3     3  4.70    24.49
+FAI_33    32 453 1.79 1.41      1    1.74 1.48   0   4     4  0.33    -1.24
+FAI_34    33 453 1.77 0.99      2    1.78 1.48   0   4     4  0.12    -0.30
+FAI_35    34 453 1.42 1.02      1    1.36 1.48   0   4     4  0.43    -0.27
+FAI_36    35 453 1.19 1.01      1    1.06 1.48   0   4     4  0.85     0.48
+FAI_38    36 453 0.40 0.86      0    0.18 0.00   0   4     4  2.48     5.92
+FAI_39    37 453 0.81 0.90      1    0.68 1.48   0   4     4  1.30     2.00
+FAI_40    38 453 1.83 1.14      2    1.79 1.48   0   4     4  0.28    -0.54
+FAI_41    39 453 1.32 1.13      1    1.21 1.48   0   4     4  0.65    -0.28
+FAI_42    40 453 1.48 0.85      2    1.50 1.48   0   4     4 -0.21    -0.44
+FAI_43    41 453 3.13 0.97      3    3.25 1.48   0   4     4 -0.97     0.38
+FAI_44    42 453 0.62 0.93      0    0.44 0.00   0   4     4  1.45     1.34
+FAI_45    43 453 0.94 1.22      1    0.72 1.48   0   4     4  1.23     0.46
+FAI_46    44 453 0.64 1.00      0    0.42 0.00   0   4     4  1.76     2.57
+FAI_47    45 453 1.62 1.11      2    1.60 1.48   0   4     4  0.20    -0.73
+FAI_48    46 453 0.99 1.02      1    0.86 1.48   0   4     4  0.86     0.10
+FAI_49    47 453 0.56 1.03      0    0.31 0.00   0   4     4  2.07     3.61
+FAI_50    48 453 1.33 1.15      1    1.23 1.48   0   4     4  0.63    -0.42
+FAI_51    49 453 0.47 0.96      0    0.21 0.00   0   4     4  2.45     5.56
+FAI_52    50 453 0.32 0.82      0    0.09 0.00   0   4     4  2.92     8.33
+FAI_53    51 453 0.18 0.59      0    0.02 0.00   0   4     4  4.00    17.78
+FAI_54    52 453 1.78 1.42      2    1.73 1.48   0   4     4  0.21    -1.25
+FAI_56    53 453 1.73 1.31      2    1.67 1.48   0   4     4  0.24    -1.08
+FAI_57    54 453 0.39 0.71      0    0.23 0.00   0   4     4  2.22     5.64
+FAI_58    55 453 0.31 0.63      0    0.17 0.00   0   3     3  2.26     5.12
+FAI_59    56 453 1.78 1.18      2    1.74 1.48   0   4     4  0.13    -0.79
+FAI_60    57 453 0.94 1.22      0    0.73 0.00   0   4     4  1.18     0.30
+FAI_61    58 453 0.18 0.49      0    0.05 0.00   0   3     3  2.96     9.02
+FAI_62    59 453 1.35 1.01      1    1.29 1.48   0   4     4  0.18    -0.65
+FAI_63    60 453 1.15 1.16      1    1.02 1.48   0   4     4  0.73    -0.50
+FAI_64    61 453 1.55 0.95      2    1.54 1.48   0   4     4  0.01    -0.33
+FAI_65    62 453 1.30 0.81      1    1.32 1.48   0   4     4  0.20     0.18
+FAI_66    63 453 1.28 1.09      1    1.19 1.48   0   4     4  0.59    -0.38
+FAI_67    64 453 1.26 0.95      1    1.19 1.48   0   4     4  0.35    -0.46
+FAI_68    65 453 1.22 0.99      1    1.14 1.48   0   4     4  0.45    -0.36
+FAI_69    66 453 1.11 0.92      1    1.03 1.48   0   4     4  0.57    -0.08
+FAI_70    67 453 1.52 0.97      1    1.50 1.48   0   4     4  0.18    -0.63
+FAI_71    68 453 0.64 0.95      0    0.46 0.00   0   4     4  1.37     0.87
+FAI_72    69 453 0.56 0.67      0    0.47 0.00   0   4     4  1.27     2.77
+FAI_73    70 453 0.44 0.78      0    0.26 0.00   0   4     4  2.17     5.29
+FAI_74    71 453 0.26 0.81      0    0.03 0.00   0   4     4  3.42    11.17
+FAI_75    72 453 1.63 0.76      2    1.67 0.00   0   4     4 -0.30     0.42
+FAI_76    73 453 0.24 0.66      0    0.06 0.00   0   4     4  3.24    10.83
+FAI_77    74 453 0.02 0.17      0    0.00 0.00   0   2     2  9.35    94.02
+FAI_79    75 453 0.78 0.90      1    0.64 1.48   0   4     4  1.29     1.71
+FAI_80    76 453 1.45 0.87      1    1.44 1.48   0   4     4  0.13    -0.18
+FAI_81    77 453 1.80 1.27      2    1.75 1.48   0   4     4  0.29    -1.00
+FAI_82    78 453 1.11 0.95      1    1.01 1.48   0   4     4  0.69     0.05
+FAI_83    79 453 1.20 1.18      1    1.05 1.48   0   4     4  0.85    -0.16
+FAI_85    80 453 1.33 0.90      1    1.30 1.48   0   4     4  0.29    -0.11
+FAI_86    81 453 1.19 1.02      1    1.06 1.48   0   4     4  0.95     0.64
+FAI_87    82 453 1.02 0.88      1    0.94 1.48   0   4     4  0.75     0.48
+FAI_88    83 453 2.36 1.19      2    2.44 1.48   0   4     4 -0.39    -0.67
+FAI_89    84 453 0.60 0.87      0    0.42 0.00   0   4     4  1.57     2.09
+FAI_90    85 453 1.15 0.95      1    1.06 1.48   0   4     4  0.64     0.09
+FAI_91    86 453 0.53 0.93      0    0.31 0.00   0   4     4  2.14     4.43
+FAI_92    87 453 0.75 0.81      1    0.63 1.48   0   4     4  1.15     1.61
+FAI_93    88 453 1.10 0.80      1    1.08 1.48   0   4     4  0.41     0.14
+FAI_94    89 453 1.62 0.93      2    1.63 1.48   0   4     4  0.08    -0.46
+FAI_95    90 453 2.01 0.86      2    2.03 1.48   0   4     4 -0.15    -0.11
+FAI_96    91 453 2.05 1.22      2    2.02 1.48   0   4     4  0.24    -1.10
+FAI_97    92 453 0.48 0.89      0    0.27 0.00   0   4     4  2.00     3.56
+FAI_98    93 453 1.43 0.97      1    1.40 1.48   0   4     4  0.25    -0.61
+FAI_99    94 453 2.06 1.15      2    2.02 1.48   0   4     4  0.34    -0.79
+FAI_100   95 453 1.68 0.95      2    1.66 1.48   0   4     4  0.31    -0.09
+FAI_101   96 453 1.75 1.24      2    1.69 1.48   0   4     4  0.17    -0.98
+FAI_102   97 453 1.52 0.83      2    1.51 1.48   0   4     4  0.23     0.16
+FAI_103   98 453 1.64 1.41      1    1.55 1.48   0   4     4  0.56    -1.04
+FAI_104   99 453 1.16 0.81      1    1.14 1.48   0   4     4  0.47     0.46
+FAI_105  100 453 0.97 1.06      1    0.80 1.48   0   4     4  1.11     0.70
+FAI_106  101 453 0.67 0.99      0    0.47 0.00   0   4     4  1.60     2.08
+FAI_107  102 453 1.98 1.17      2    1.95 1.48   0   4     4  0.17    -0.92
+FAI_108  103 453 1.96 0.91      2    1.97 1.48   0   4     4 -0.02     0.06
+FAI_111  104 453 1.50 0.81      2    1.54 1.48   0   4     4 -0.20    -0.14
+FAI_112  105 453 0.80 1.09      0    0.59 0.00   0   4     4  1.38     1.19
+FAI_113  106 453 1.06 0.97      1    0.95 1.48   0   4     4  0.85     0.42
+FAI_114  107 453 1.22 0.91      1    1.16 1.48   0   4     4  0.48    -0.05
+FAI_115  108 453 1.23 0.85      1    1.21 1.48   0   4     4  0.28    -0.24
+FAI_116  109 453 1.54 1.35      1    1.43 1.48   0   4     4  0.58    -0.92
+FAI_117  110 453 1.64 0.77      2    1.63 1.48   0   4     4 -0.05    -0.11
+FAI_118  111 453 1.58 1.06      2    1.55 1.48   0   4     4  0.28    -0.59
+FAI_119  112 453 1.21 0.81      1    1.19 0.00   0   4     4  0.51     0.57
+FAI_120  113 453 0.58 0.84      0    0.40 0.00   0   4     4  1.77     3.54
+FAI_121  114 453 0.49 0.71      0    0.37 0.00   0   4     4  1.83     4.57
+FAI_122  115 453 1.64 0.83      2    1.61 1.48   0   4     4  0.26     0.39
+FAI_124  116 453 1.05 1.20      1    0.84 1.48   0   4     4  1.17     0.47
+FAI_125  117 453 1.29 0.91      1    1.25 1.48   0   4     4  0.30    -0.37
+FAI_127  118 453 1.20 1.18      1    1.07 1.48   0   4     4  0.77    -0.38
+FAI_128  119 453 0.91 0.95      1    0.79 1.48   0   4     4  1.08     1.00
+FAI_129  120 453 2.06 1.42      2    2.07 1.48   0   4     4  0.14    -1.40
+FAI_130  121 453 1.46 0.97      1    1.42 1.48   0   4     4  0.33    -0.29
+FAI_131  122 453 2.19 1.37      2    2.23 1.48   0   4     4 -0.20    -1.22
+FAI_132  123 453 1.42 1.24      1    1.30 1.48   0   4     4  0.60    -0.62
+FAI_133  124 453 1.63 1.62      1    1.54 1.48   0   4     4  0.45    -1.44
+FAI_134  125 453 0.90 1.12      1    0.71 1.48   0   4     4  1.14     0.40
+FAI_135  126 453 0.40 0.77      0    0.22 0.00   0   4     4  2.29     5.89
+FAI_136  127 453 3.31 0.92      4    3.47 0.00   0   4     4 -1.38     1.51
+FAI_137  128 453 1.23 1.26      1    1.06 1.48   0   4     4  0.85    -0.32
+FAI_138  129 453 0.13 0.55      0    0.00 0.00   0   4     4  5.07    27.85
+FAI_139  130 453 1.26 1.19      1    1.13 1.48   0   4     4  0.66    -0.53
+FAI_140  131 453 1.13 0.98      1    1.03 1.48   0   4     4  0.67    -0.02
+FAI_141  132 453 1.38 0.94      1    1.32 1.48   0   4     4  0.47    -0.05
+FAI_142  133 453 1.93 0.95      2    1.91 1.48   0   4     4  0.16    -0.31
+FAI_143  134 453 1.15 0.87      1    1.11 1.48   0   4     4  0.48     0.02
+FAI_144  135 453 0.90 1.02      1    0.74 1.48   0   4     4  1.07     0.55
+FAI_145  136 453 1.75 1.55      1    1.68 1.48   0   4     4  0.39    -1.41
+FAI_146  137 453 1.54 0.85      2    1.53 1.48   0   4     4  0.09     0.05
+FAI_148  138 453 0.75 1.11      0    0.54 0.00   0   4     4  1.25     0.34
+FAI_149  139 453 1.48 0.83      2    1.49 1.48   0   4     4  0.08     0.02
+FAI_151  140 453 1.98 1.20      2    1.97 1.48   0   4     4  0.16    -1.00
+FAI_152  141 453 0.17 0.48      0    0.04 0.00   0   3     3  3.17    10.90
+FAI_153  142 453 0.58 0.74      0    0.46 0.00   0   4     4  1.46     2.88
+FAI_154  143 453 1.71 1.09      2    1.63 1.48   0   4     4  0.55    -0.15
+FAI_155  144 453 1.39 0.87      1    1.36 1.48   0   4     4  0.35     0.07
+FAI_156  145 453 0.89 0.87      1    0.79 1.48   0   4     4  1.06     1.42
+FAI_157  146 453 0.46 0.77      0    0.29 0.00   0   4     4  1.98     4.15
+FAI_159  147 453 1.41 1.34      1    1.26 1.48   0   4     4  0.58    -0.89
+FAI_160  148 453 1.44 0.91      1    1.41 1.48   0   4     4  0.18    -0.41
+FAI_161  149 453 0.97 0.87      1    0.89 1.48   0   4     4  0.80     0.58
+FAI_162  150 453 0.47 0.81      0    0.28 0.00   0   4     4  2.02     4.36
+FAI_163  151 453 1.48 0.97      1    1.45 1.48   0   4     4  0.30    -0.22
+FAI_164  152 453 2.34 1.02      2    2.36 1.48   0   4     4 -0.21    -0.39
+FAI_165  153 453 1.80 1.06      2    1.79 1.48   0   4     4  0.20    -0.52
+FAI_166  154 453 1.22 0.81      1    1.19 0.00   0   4     4  0.43     0.04
+FAI_167  155 453 1.91 1.03      2    1.88 1.48   0   4     4  0.20    -0.27
+FAI_168  156 453 0.77 1.13      0    0.54 0.00   0   4     4  1.45     1.15
+FAI_169  157 453 0.65 1.16      0    0.36 0.00   0   4     4  1.82     2.14
+FAI_170  158 453 0.91 0.88      1    0.81 1.48   0   4     4  1.07     1.41
+FAI_172  159 453 2.00 1.15      2    2.00 1.48   0   4     4  0.13    -0.71
+FAI_173  160 453 1.05 1.20      1    0.86 1.48   0   4     4  1.12     0.29
+FAI_174  161 453 0.34 0.69      0    0.18 0.00   0   4     4  2.63     8.18
+FAI_175  162 453 0.23 0.68      0    0.04 0.00   0   4     4  3.58    13.52
+FAI_176  163 453 1.15 0.86      1    1.09 1.48   0   4     4  0.64     0.38
+FAI_177  164 453 1.73 0.91      2    1.74 1.48   0   4     4  0.05    -0.08
+FAI_178  165 453 1.49 0.87      1    1.48 1.48   0   4     4  0.14    -0.21
+FAI_179  166 453 2.13 1.05      2    2.12 1.48   0   4     4 -0.10    -0.50
+FAI_180  167 453 0.87 0.92      1    0.76 1.48   0   4     4  1.02     0.91
+FAI_181  168 453 1.40 1.37      1    1.25 1.48   0   4     4  0.64    -0.86
+FAI_182  169 453 0.09 0.36      0    0.00 0.00   0   3     3  4.64    23.25
+FAI_183  170 453 1.52 0.98      2    1.49 1.48   0   4     4  0.27    -0.29
+FAI_185  171 453 1.17 1.29      1    1.02 1.48   0   4     4  0.67    -0.84
+FAI_186  172 453 1.55 0.99      2    1.53 1.48   0   4     4  0.24    -0.45
+FAI_187  173 453 1.84 1.45      2    1.80 1.48   0   4     4  0.04    -1.38
+FAI_189  174 453 2.75 0.91      3    2.81 1.48   0   4     4 -0.47     0.01
+FAI_190  175 453 0.68 0.95      0    0.52 0.00   0   4     4  1.44     1.70
+FAI_191  176 453 1.22 0.95      1    1.15 1.48   0   4     4  0.42    -0.32
+FAI_192  177 453 1.04 0.86      1    0.97 1.48   0   4     4  0.73     0.55
+FAI_193  178 453 0.23 0.65      0    0.06 0.00   0   4     4  3.75    15.76
+FAI_194  179 453 1.12 0.96      1    1.03 1.48   0   4     4  0.60    -0.17
+FAI_195  180 453 1.00 0.90      1    0.92 1.48   0   4     4  0.69     0.17
+FAI_196  181 453 0.82 1.11      0    0.60 0.00   0   4     4  1.37     1.07
+FAI_197  182 453 0.31 0.63      0    0.18 0.00   0   4     4  2.40     6.71
+          se
+FAI_1   0.04
+FAI_2   0.05
+FAI_3   0.05
+FAI_4   0.06
+FAI_5   0.06
+FAI_6   0.05
+FAI_7   0.05
+FAI_8   0.05
+FAI_9   0.04
+FAI_10  0.04
+FAI_11  0.06
+FAI_12  0.04
+FAI_13  0.04
+FAI_14  0.06
+FAI_15  0.05
+FAI_16  0.05
+FAI_18  0.05
+FAI_19  0.05
+FAI_20  0.05
+FAI_21  0.04
+FAI_22  0.04
+FAI_23  0.05
+FAI_24  0.03
+FAI_25  0.06
+FAI_26  0.06
+FAI_27  0.05
+FAI_28  0.05
+FAI_29  0.05
+FAI_30  0.06
+FAI_31  0.05
+FAI_32  0.02
+FAI_33  0.07
+FAI_34  0.05
+FAI_35  0.05
+FAI_36  0.05
+FAI_38  0.04
+FAI_39  0.04
+FAI_40  0.05
+FAI_41  0.05
+FAI_42  0.04
+FAI_43  0.05
+FAI_44  0.04
+FAI_45  0.06
+FAI_46  0.05
+FAI_47  0.05
+FAI_48  0.05
+FAI_49  0.05
+FAI_50  0.05
+FAI_51  0.05
+FAI_52  0.04
+FAI_53  0.03
+FAI_54  0.07
+FAI_56  0.06
+FAI_57  0.03
+FAI_58  0.03
+FAI_59  0.06
+FAI_60  0.06
+FAI_61  0.02
+FAI_62  0.05
+FAI_63  0.05
+FAI_64  0.04
+FAI_65  0.04
+FAI_66  0.05
+FAI_67  0.04
+FAI_68  0.05
+FAI_69  0.04
+FAI_70  0.05
+FAI_71  0.04
+FAI_72  0.03
+FAI_73  0.04
+FAI_74  0.04
+FAI_75  0.04
+FAI_76  0.03
+FAI_77  0.01
+FAI_79  0.04
+FAI_80  0.04
+FAI_81  0.06
+FAI_82  0.04
+FAI_83  0.06
+FAI_85  0.04
+FAI_86  0.05
+FAI_87  0.04
+FAI_88  0.06
+FAI_89  0.04
+FAI_90  0.04
+FAI_91  0.04
+FAI_92  0.04
+FAI_93  0.04
+FAI_94  0.04
+FAI_95  0.04
+FAI_96  0.06
+FAI_97  0.04
+FAI_98  0.05
+FAI_99  0.05
+FAI_100 0.04
+FAI_101 0.06
+FAI_102 0.04
+FAI_103 0.07
+FAI_104 0.04
+FAI_105 0.05
+FAI_106 0.05
+FAI_107 0.05
+FAI_108 0.04
+FAI_111 0.04
+FAI_112 0.05
+FAI_113 0.05
+FAI_114 0.04
+FAI_115 0.04
+FAI_116 0.06
+FAI_117 0.04
+FAI_118 0.05
+FAI_119 0.04
+FAI_120 0.04
+FAI_121 0.03
+FAI_122 0.04
+FAI_124 0.06
+FAI_125 0.04
+FAI_127 0.06
+FAI_128 0.04
+FAI_129 0.07
+FAI_130 0.05
+FAI_131 0.06
+FAI_132 0.06
+FAI_133 0.08
+FAI_134 0.05
+FAI_135 0.04
+FAI_136 0.04
+FAI_137 0.06
+FAI_138 0.03
+FAI_139 0.06
+FAI_140 0.05
+FAI_141 0.04
+FAI_142 0.04
+FAI_143 0.04
+FAI_144 0.05
+FAI_145 0.07
+FAI_146 0.04
+FAI_148 0.05
+FAI_149 0.04
+FAI_151 0.06
+FAI_152 0.02
+FAI_153 0.03
+FAI_154 0.05
+FAI_155 0.04
+FAI_156 0.04
+FAI_157 0.04
+FAI_159 0.06
+FAI_160 0.04
+FAI_161 0.04
+FAI_162 0.04
+FAI_163 0.05
+FAI_164 0.05
+FAI_165 0.05
+FAI_166 0.04
+FAI_167 0.05
+FAI_168 0.05
+FAI_169 0.05
+FAI_170 0.04
+FAI_172 0.05
+FAI_173 0.06
+FAI_174 0.03
+FAI_175 0.03
+FAI_176 0.04
+FAI_177 0.04
+FAI_178 0.04
+FAI_179 0.05
+FAI_180 0.04
+FAI_181 0.06
+FAI_182 0.02
+FAI_183 0.05
+FAI_185 0.06
+FAI_186 0.05
+FAI_187 0.07
+FAI_189 0.04
+FAI_190 0.04
+FAI_191 0.04
+FAI_192 0.04
+FAI_193 0.03
+FAI_194 0.05
+FAI_195 0.04
+FAI_196 0.05
+FAI_197 0.03</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>items_skew_kurt_bad <span class="ot">&lt;-</span> items_stats <span class="sc">|&gt;</span> </span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(skew <span class="sc">&gt;</span> <span class="fl">2.5</span> <span class="sc">|</span> kurtosis <span class="sc">&gt;</span> <span class="fl">7.5</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">row.names</span>()</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>items_skew_kurt_bad</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "FAI_24"  "FAI_32"  "FAI_52"  "FAI_53"  "FAI_61"  "FAI_74"  "FAI_76" 
+ [8] "FAI_77"  "FAI_138" "FAI_152" "FAI_174" "FAI_175" "FAI_182" "FAI_193"</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> items_df <span class="sc">|&gt;</span> </span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">!</span><span class="fu">any_of</span>(items_skew_kurt_bad))</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 453
+Columns: 168
+$ FAI_1   &lt;dbl&gt; 0, 3, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+$ FAI_2   &lt;dbl&gt; 1, 2, 0, 0, 1, 1, 0, 0, 1, 1, 1, 2, 1, 0, 0, 2, 1, 0, 0, 0, 1,…
+$ FAI_3   &lt;dbl&gt; 1, 3, 2, 1, 0, 1, 0, 1, 2, 4, 1, 2, 1, 3, 4, 2, 2, 0, 2, 1, 1,…
+$ FAI_4   &lt;dbl&gt; 0, 0, 3, 0, 0, 2, 1, 0, 1, 2, 2, 2, 0, 1, 2, 1, 2, 1, 3, 0, 3,…
+$ FAI_5   &lt;dbl&gt; 1, 0, 0, 1, 1, 0, 0, 4, 0, 1, 0, 0, 1, 0, 1, 0, 1, 2, 0, 0, 0,…
+$ FAI_6   &lt;dbl&gt; 0, 2, 2, 0, 0, 1, 0, 0, 1, 4, 3, 3, 3, 4, 4, 2, 0, 1, 0, 0, 0,…
+$ FAI_7   &lt;dbl&gt; 0, 0, 3, 0, 0, 0, 1, 0, 2, 4, 4, 3, 4, 4, 4, 4, 0, 2, 0, 0, 0,…
+$ FAI_8   &lt;dbl&gt; 0, 0, 3, 0, 1, 1, 2, 1, 1, 2, 2, 2, 1, 3, 4, 4, 2, 1, 1, 0, 1,…
+$ FAI_9   &lt;dbl&gt; 3, 3, 2, 2, 3, 2, 2, 3, 0, 3, 1, 3, 3, 3, 2, 3, 2, 3, 2, 3, 2,…
+$ FAI_10  &lt;dbl&gt; 1, 2, 2, 1, 1, 2, 0, 2, 2, 3, 3, 3, 1, 3, 2, 2, 2, 2, 0, 2, 1,…
+$ FAI_11  &lt;dbl&gt; 1, 3, 0, 1, 1, 2, 4, 4, 0, 1, 2, 0, 4, 0, 1, 0, 1, 4, 4, 4, 1,…
+$ FAI_12  &lt;dbl&gt; 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0, 0, 0,…
+$ FAI_13  &lt;dbl&gt; 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 2, 0,…
+$ FAI_14  &lt;dbl&gt; 2, 1, 1, 1, 1, 2, 4, 2, 2, 2, 1, 3, 4, 1, 1, 2, 3, 4, 2, 3, 1,…
+$ FAI_15  &lt;dbl&gt; 0, 1, 4, 1, 0, 0, 1, 0, 2, 4, 4, 3, 3, 3, 4, 4, 0, 2, 0, 0, 0,…
+$ FAI_16  &lt;dbl&gt; 1, 2, 3, 1, 1, 2, 2, 1, 2, 4, 2, 3, 3, 4, 4, 3, 0, 2, 0, 1, 0,…
+$ FAI_18  &lt;dbl&gt; 0, 0, 0, 2, 0, 1, 0, 1, 1, 3, 1, 2, 1, 3, 4, 3, 1, 1, 0, 2, 1,…
+$ FAI_19  &lt;dbl&gt; 2, 0, 1, 0, 3, 1, 0, 1, 0, 1, 1, 3, 1, 1, 1, 1, 3, 0, 0, 1, 2,…
+$ FAI_20  &lt;dbl&gt; 1, 0, 0, 0, 0, 0, 4, 3, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0,…
+$ FAI_21  &lt;dbl&gt; 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 3, 1, 1, 2, 1, 0,…
+$ FAI_22  &lt;dbl&gt; 0, 3, 4, 2, 3, 2, 2, 2, 2, 2, 2, 1, 0, 1, 2, 2, 2, 1, 1, 2, 2,…
+$ FAI_23  &lt;dbl&gt; 1, 4, 3, 3, 3, 2, 4, 3, 2, 2, 1, 3, 1, 3, 2, 3, 2, 0, 2, 2, 2,…
+$ FAI_25  &lt;dbl&gt; 2, 4, 1, 3, 3, 2, 4, 4, 2, 2, 3, 1, 4, 3, 1, 2, 1, 4, 4, 1, 1,…
+$ FAI_26  &lt;dbl&gt; 1, 2, 3, 4, 3, 3, 0, 2, 2, 3, 0, 2, 1, 3, 3, 1, 4, 2, 1, 1, 1,…
+$ FAI_27  &lt;dbl&gt; 0, 0, 3, 3, 1, 3, 0, 3, 2, 4, 3, 3, 0, 4, 4, 1, 1, 0, 1, 2, 0,…
+$ FAI_28  &lt;dbl&gt; 3, 0, 1, 0, 0, 2, 0, 1, 2, 3, 4, 3, 3, 2, 2, 3, 1, 2, 2, 3, 1,…
+$ FAI_29  &lt;dbl&gt; 0, 0, 1, 2, 1, 3, 0, 3, 0, 0, 0, 0, 3, 0, 0, 0, 0, 4, 0, 0, 1,…
+$ FAI_30  &lt;dbl&gt; 2, 0, 2, 4, 2, 2, 1, 3, 0, 4, 0, 3, 3, 2, 4, 2, 0, 2, 2, 1, 1,…
+$ FAI_31  &lt;dbl&gt; 0, 4, 1, 0, 1, 2, 0, 3, 1, 0, 0, 3, 3, 1, 1, 1, 0, 1, 0, 2, 1,…
+$ FAI_33  &lt;dbl&gt; 1, 4, 0, 1, 1, 3, 4, 3, 0, 0, 3, 0, 4, 0, 1, 0, 1, 4, 4, 1, 0,…
+$ FAI_34  &lt;dbl&gt; 2, 0, 4, 1, 2, 2, 1, 2, 2, 2, 0, 4, 1, 2, 2, 4, 2, 1, 2, 1, 2,…
+$ FAI_35  &lt;dbl&gt; 2, 0, 1, 1, 0, 2, 1, 2, 2, 3, 3, 4, 3, 2, 2, 3, 2, 4, 3, 1, 1,…
+$ FAI_36  &lt;dbl&gt; 0, 1, 3, 0, 0, 2, 0, 1, 2, 4, 4, 3, 1, 3, 4, 4, 1, 1, 0, 1, 0,…
+$ FAI_38  &lt;dbl&gt; 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 1, 0, 0, 0, 0,…
+$ FAI_39  &lt;dbl&gt; 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 2, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0,…
+$ FAI_40  &lt;dbl&gt; 1, 0, 2, 3, 1, 2, 2, 3, 2, 2, 1, 3, 2, 3, 2, 3, 1, 2, 2, 1, 0,…
+$ FAI_41  &lt;dbl&gt; 0, 0, 3, 0, 0, 1, 2, 2, 2, 3, 3, 2, 1, 3, 2, 2, 1, 0, 2, 1, 2,…
+$ FAI_42  &lt;dbl&gt; 2, 1, 3, 0, 2, 2, 2, 1, 2, 4, 3, 2, 4, 3, 3, 3, 2, 1, 2, 2, 1,…
+$ FAI_43  &lt;dbl&gt; 2, 2, 4, 4, 4, 2, 4, 4, 2, 4, 1, 3, 4, 4, 4, 3, 2, 4, 4, 2, 4,…
+$ FAI_44  &lt;dbl&gt; 0, 1, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 3, 0, 0, 0, 2, 2, 1, 0, 0,…
+$ FAI_45  &lt;dbl&gt; 1, 3, 1, 0, 4, 0, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 0, 0, 0, 0, 1,…
+$ FAI_46  &lt;dbl&gt; 0, 1, 1, 1, 1, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, 0, 0, 0,…
+$ FAI_47  &lt;dbl&gt; 0, 4, 3, 0, 1, 1, 0, 2, 2, 4, 2, 2, 3, 3, 4, 2, 2, 4, 0, 1, 0,…
+$ FAI_48  &lt;dbl&gt; 2, 0, 1, 0, 1, 1, 1, 2, 2, 3, 0, 0, 0, 4, 1, 1, 1, 0, 4, 3, 0,…
+$ FAI_49  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0,…
+$ FAI_50  &lt;dbl&gt; 2, 0, 0, 0, 2, 0, 1, 2, 0, 0, 2, 0, 0, 2, 1, 2, 3, 4, 2, 0, 1,…
+$ FAI_51  &lt;dbl&gt; 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 3, 1, 0, 0, 0,…
+$ FAI_54  &lt;dbl&gt; 0, 0, 1, 1, 0, 0, 0, 1, 0, 4, 0, 1, 4, 0, 0, 1, 3, 0, 0, 1, 1,…
+$ FAI_56  &lt;dbl&gt; 0, 0, 4, 0, 1, 1, 2, 1, 2, 0, 2, 1, 4, 3, 2, 3, 2, 1, 3, 2, 2,…
+$ FAI_57  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+$ FAI_58  &lt;dbl&gt; 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0,…
+$ FAI_59  &lt;dbl&gt; 1, 2, 1, 2, 1, 2, 1, 2, 2, 2, 3, 3, 1, 3, 4, 3, 2, 1, 2, 0, 1,…
+$ FAI_60  &lt;dbl&gt; 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+$ FAI_62  &lt;dbl&gt; 1, 0, 3, 0, 2, 2, 0, 0, 2, 4, 2, 2, 3, 3, 3, 4, 4, 2, 0, 1, 1,…
+$ FAI_63  &lt;dbl&gt; 0, 0, 0, 0, 1, 1, 0, 2, 2, 4, 3, 4, 3, 3, 4, 4, 1, 0, 0, 0, 0,…
+$ FAI_64  &lt;dbl&gt; 1, 0, 3, 0, 2, 2, 0, 2, 2, 3, 2, 2, 2, 2, 2, 3, 2, 1, 0, 1, 0,…
+$ FAI_65  &lt;dbl&gt; 1, 0, 2, 0, 2, 2, 0, 2, 2, 4, 3, 3, 4, 2, 4, 3, 2, 0, 2, 1, 0,…
+$ FAI_66  &lt;dbl&gt; 0, 1, 2, 1, 0, 1, 0, 1, 2, 4, 2, 2, 1, 4, 4, 3, 1, 2, 0, 2, 0,…
+$ FAI_67  &lt;dbl&gt; 2, 0, 1, 0, 0, 2, 0, 2, 1, 3, 3, 3, 3, 0, 2, 3, 2, 4, 3, 2, 1,…
+$ FAI_68  &lt;dbl&gt; 0, 0, 1, 1, 0, 2, 0, 2, 2, 2, 0, 0, 0, 3, 1, 1, 3, 0, 2, 1, 1,…
+$ FAI_69  &lt;dbl&gt; 2, 1, 1, 1, 0, 2, 0, 2, 1, 2, 3, 3, 4, 2, 2, 4, 2, 2, 0, 2, 1,…
+$ FAI_70  &lt;dbl&gt; 1, 2, 2, 1, 1, 2, 0, 2, 2, 4, 3, 3, 2, 4, 4, 3, 2, 2, 1, 3, 0,…
+$ FAI_71  &lt;dbl&gt; 0, 0, 1, 0, 0, 0, 0, 0, 0, 3, 0, 0, 1, 1, 0, 1, 3, 0, 0, 2, 1,…
+$ FAI_72  &lt;dbl&gt; 1, 0, 4, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1,…
+$ FAI_73  &lt;dbl&gt; 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 3, 0, 1, 0, 2, 4, 2, 3,…
+$ FAI_75  &lt;dbl&gt; 1, 0, 2, 1, 2, 2, 1, 2, 2, 2, 1, 2, 2, 1, 2, 3, 2, 2, 2, 1, 1,…
+$ FAI_79  &lt;dbl&gt; 0, 1, 0, 0, 0, 0, 0, 1, 1, 4, 3, 4, 3, 4, 3, 4, 1, 2, 3, 1, 0,…
+$ FAI_80  &lt;dbl&gt; 0, 2, 2, 0, 2, 0, 0, 1, 2, 3, 2, 2, 1, 3, 2, 3, 1, 2, 2, 2, 1,…
+$ FAI_81  &lt;dbl&gt; 1, 2, 1, 3, 2, 1, 4, 3, 0, 2, 1, 1, 2, 3, 2, 0, 1, 3, 2, 2, 1,…
+$ FAI_82  &lt;dbl&gt; 1, 0, 2, 1, 1, 1, 1, 3, 1, 0, 1, 3, 1, 2, 1, 1, 2, 1, 1, 3, 2,…
+$ FAI_83  &lt;dbl&gt; 0, 0, 1, 1, 1, 0, 1, 3, 0, 0, 0, 1, 1, 0, 2, 0, 2, 1, 0, 0, 1,…
+$ FAI_85  &lt;dbl&gt; 0, 1, 2, 1, 2, 1, 0, 0, 2, 3, 3, 2, 1, 4, 2, 4, 1, 2, 2, 2, 0,…
+$ FAI_86  &lt;dbl&gt; 0, 2, 4, 0, 0, 0, 0, 2, 1, 2, 1, 1, 1, 1, 1, 0, 1, 3, 0, 1, 0,…
+$ FAI_87  &lt;dbl&gt; 0, 1, 1, 0, 0, 1, 0, 1, 1, 3, 4, 2, 3, 4, 2, 3, 2, 2, 3, 1, 0,…
+$ FAI_88  &lt;dbl&gt; 3, 3, 2, 2, 3, 1, 2, 4, 2, 3, 2, 2, 1, 2, 3, 2, 4, 0, 4, 3, 3,…
+$ FAI_89  &lt;dbl&gt; 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1,…
+$ FAI_90  &lt;dbl&gt; 0, 1, 1, 1, 0, 2, 0, 2, 1, 4, 3, 3, 3, 4, 3, 3, 1, 3, 4, 2, 0,…
+$ FAI_91  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 1, 3, 0, 0, 0, 0, 0, 0, 0, 1, 3, 0, 0, 0,…
+$ FAI_92  &lt;dbl&gt; 0, 0, 0, 0, 0, 4, 0, 1, 1, 3, 3, 3, 3, 4, 3, 0, 4, 2, 0, 1, 1,…
+$ FAI_93  &lt;dbl&gt; 0, 1, 1, 0, 2, 2, 2, 1, 2, 3, 3, 3, 4, 4, 3, 3, 2, 1, 2, 1, 0,…
+$ FAI_94  &lt;dbl&gt; 0, 1, 2, 2, 2, 2, 0, 1, 2, 3, 0, 2, 1, 3, 3, 3, 3, 3, 2, 2, 0,…
+$ FAI_95  &lt;dbl&gt; 0, 2, 2, 2, 3, 2, 2, 3, 2, 3, 3, 1, 3, 2, 3, 2, 1, 2, 3, 3, 1,…
+$ FAI_96  &lt;dbl&gt; 1, 4, 1, 0, 1, 2, 1, 3, 3, 1, 2, 2, 4, 3, 2, 1, 4, 1, 0, 3, 1,…
+$ FAI_97  &lt;dbl&gt; 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0,…
+$ FAI_98  &lt;dbl&gt; 0, 0, 3, 1, 1, 0, 1, 2, 3, 3, 2, 3, 1, 2, 4, 3, 1, 3, 2, 2, 0,…
+$ FAI_99  &lt;dbl&gt; 1, 1, 4, 1, 2, 0, 4, 2, 1, 0, 2, 2, 3, 3, 2, 3, 2, 0, 1, 2, 2,…
+$ FAI_100 &lt;dbl&gt; 0, 1, 3, 1, 1, 0, 0, 2, 2, 1, 1, 2, 1, 2, 3, 3, 3, 2, 2, 3, 1,…
+$ FAI_101 &lt;dbl&gt; 1, 3, 0, 0, 1, 2, 0, 2, 0, 0, 1, 1, 4, 1, 1, 2, 2, 4, 0, 0, 1,…
+$ FAI_102 &lt;dbl&gt; 0, 2, 2, 1, 2, 1, 1, 2, 2, 3, 3, 2, 2, 3, 2, 2, 3, 1, 2, 2, 1,…
+$ FAI_103 &lt;dbl&gt; 2, 0, 1, 1, 1, 0, 1, 1, 0, 2, 0, 0, 4, 0, 0, 1, 1, 3, 2, 0, 1,…
+$ FAI_104 &lt;dbl&gt; 1, 0, 1, 1, 2, 1, 0, 1, 1, 4, 3, 3, 4, 4, 4, 3, 2, 0, 2, 1, 1,…
+$ FAI_105 &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 1, 0, 2, 1, 1, 0, 1, 1, 0, 0, 0,…
+$ FAI_106 &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 3, 0, 1, 2, 0, 1, 0, 0, 0, 0, 3, 0, 0, 0,…
+$ FAI_107 &lt;dbl&gt; 1, 0, 1, 0, 1, 3, 1, 3, 2, 2, 1, 1, 1, 1, 4, 1, 3, 2, 4, 3, 1,…
+$ FAI_108 &lt;dbl&gt; 2, 1, 2, 2, 2, 2, 1, 1, 2, 3, 2, 2, 2, 2, 2, 3, 2, 0, 2, 2, 2,…
+$ FAI_111 &lt;dbl&gt; 1, 1, 2, 1, 2, 1, 1, 2, 2, 4, 3, 2, 3, 3, 2, 3, 2, 1, 2, 2, 1,…
+$ FAI_112 &lt;dbl&gt; 1, 0, 0, 0, 0, 0, 0, 2, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,…
+$ FAI_113 &lt;dbl&gt; 1, 1, 1, 1, 1, 3, 1, 1, 2, 0, 2, 3, 0, 1, 1, 1, 1, 0, 1, 2, 1,…
+$ FAI_114 &lt;dbl&gt; 2, 1, 2, 0, 0, 1, 0, 2, 1, 2, 3, 3, 3, 3, 1, 3, 1, 2, 3, 2, 1,…
+$ FAI_115 &lt;dbl&gt; 0, 0, 2, 1, 0, 1, 1, 1, 2, 4, 3, 3, 1, 3, 3, 3, 1, 1, 2, 1, 0,…
+$ FAI_116 &lt;dbl&gt; 0, 2, 0, 0, 0, 0, 0, 3, 1, 1, 0, 0, 4, 0, 1, 0, 0, 1, 2, 0, 1,…
+$ FAI_117 &lt;dbl&gt; 0, 1, 2, 0, 2, 1, 0, 2, 2, 3, 2, 2, 0, 3, 2, 3, 2, 1, 2, 2, 1,…
+$ FAI_118 &lt;dbl&gt; 0, 1, 1, 1, 1, 0, 0, 2, 1, 3, 3, 4, 4, 4, 3, 4, 1, 3, 3, 1, 1,…
+$ FAI_119 &lt;dbl&gt; 1, 1, 1, 1, 3, 0, 1, 2, 2, 4, 3, 3, 4, 3, 3, 3, 2, 1, 2, 0, 1,…
+$ FAI_120 &lt;dbl&gt; 0, 0, 2, 1, 0, 0, 0, 1, 1, 4, 4, 3, 1, 3, 4, 4, 0, 0, 0, 0, 0,…
+$ FAI_121 &lt;dbl&gt; 1, 0, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0,…
+$ FAI_122 &lt;dbl&gt; 2, 0, 3, 1, 2, 0, 0, 1, 2, 3, 3, 2, 1, 2, 2, 3, 1, 3, 2, 2, 1,…
+$ FAI_124 &lt;dbl&gt; 1, 0, 0, 0, 0, 0, 0, 3, 1, 0, 1, 0, 1, 1, 1, 0, 0, 2, 0, 0, 0,…
+$ FAI_125 &lt;dbl&gt; 0, 1, 1, 1, 0, 0, 0, 1, 2, 4, 3, 3, 2, 3, 3, 3, 1, 3, 2, 1, 0,…
+$ FAI_127 &lt;dbl&gt; 1, 2, 1, 0, 1, 0, 0, 2, 1, 0, 0, 0, 3, 0, 1, 0, 0, 1, 0, 0, 0,…
+$ FAI_128 &lt;dbl&gt; 0, 1, 2, 1, 0, 0, 0, 0, 2, 4, 3, 3, 2, 4, 4, 4, 0, 1, 1, 0, 0,…
+$ FAI_129 &lt;dbl&gt; 2, 3, 4, 3, 3, 4, 4, 3, 2, 2, 3, 2, 4, 1, 2, 1, 0, 4, 2, 1, 0,…
+$ FAI_130 &lt;dbl&gt; 1, 1, 1, 1, 0, 0, 0, 2, 1, 2, 2, 2, 2, 2, 4, 3, 1, 2, 2, 1, 1,…
+$ FAI_131 &lt;dbl&gt; 1, 0, 2, 2, 0, 0, 1, 1, 1, 2, 3, 3, 4, 1, 0, 1, 3, 0, 2, 2, 3,…
+$ FAI_132 &lt;dbl&gt; 0, 1, 0, 3, 1, 0, 0, 3, 1, 2, 4, 3, 2, 4, 3, 4, 1, 2, 1, 0, 0,…
+$ FAI_133 &lt;dbl&gt; 1, 4, 3, 3, 4, 1, 3, 4, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 3, 0,…
+$ FAI_134 &lt;dbl&gt; 0, 0, 1, 0, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1,…
+$ FAI_135 &lt;dbl&gt; 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 0, 2, 0, 0, 0,…
+$ FAI_136 &lt;dbl&gt; 4, 3, 3, 3, 3, 4, 4, 4, 2, 3, 3, 3, 4, 4, 3, 4, 3, 4, 3, 3, 4,…
+$ FAI_137 &lt;dbl&gt; 1, 0, 0, 0, 0, 0, 0, 2, 1, 0, 1, 1, 1, 1, 1, 1, 2, 0, 0, 0, 2,…
+$ FAI_139 &lt;dbl&gt; 0, 1, 1, 0, 0, 0, 1, 2, 1, 2, 2, 2, 2, 3, 2, 2, 2, 1, 0, 1, 2,…
+$ FAI_140 &lt;dbl&gt; 0, 2, 2, 3, 1, 1, 0, 3, 2, 3, 2, 1, 0, 1, 0, 0, 3, 0, 0, 3, 3,…
+$ FAI_141 &lt;dbl&gt; 3, 1, 1, 1, 1, 0, 2, 1, 2, 4, 3, 3, 2, 4, 4, 3, 1, 1, 2, 2, 1,…
+$ FAI_142 &lt;dbl&gt; 0, 3, 4, 2, 1, 2, 0, 3, 1, 2, 1, 3, 1, 3, 2, 3, 2, 1, 2, 2, 3,…
+$ FAI_143 &lt;dbl&gt; 0, 1, 0, 1, 1, 0, 0, 2, 2, 2, 3, 3, 2, 3, 2, 3, 1, 2, 2, 1, 1,…
+$ FAI_144 &lt;dbl&gt; 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1,…
+$ FAI_145 &lt;dbl&gt; 1, 1, 1, 0, 1, 0, 0, 2, 1, 2, 0, 0, 0, 0, 0, 0, 0, 1, 4, 0, 0,…
+$ FAI_146 &lt;dbl&gt; 1, 1, 2, 1, 3, 0, 0, 3, 2, 3, 3, 2, 0, 3, 4, 2, 3, 2, 2, 1, 0,…
+$ FAI_148 &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 3, 1, 1, 0, 0, 0, 0, 0, 0, 2, 0,…
+$ FAI_149 &lt;dbl&gt; 1, 1, 2, 1, 2, 2, 0, 2, 2, 2, 1, 2, 3, 2, 0, 4, 2, 4, 3, 2, 3,…
+$ FAI_151 &lt;dbl&gt; 2, 1, 1, 2, 1, 2, 4, 2, 3, 2, 0, 1, 4, 4, 2, 0, 1, 1, 2, 2, 1,…
+$ FAI_153 &lt;dbl&gt; 1, 1, 1, 0, 0, 0, 3, 1, 2, 0, 2, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0,…
+$ FAI_154 &lt;dbl&gt; 1, 1, 0, 0, 2, 0, 1, 3, 1, 3, 2, 2, 2, 3, 3, 4, 3, 4, 2, 1, 0,…
+$ FAI_155 &lt;dbl&gt; 1, 1, 2, 2, 1, 0, 3, 2, 2, 4, 2, 2, 1, 3, 3, 2, 1, 2, 2, 1, 1,…
+$ FAI_156 &lt;dbl&gt; 2, 0, 0, 0, 0, 0, 0, 1, 1, 3, 3, 3, 4, 3, 2, 4, 1, 0, 2, 1, 0,…
+$ FAI_157 &lt;dbl&gt; 0, 0, 1, 2, 1, 2, 0, 1, 0, 2, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0,…
+$ FAI_159 &lt;dbl&gt; 1, 0, 1, 0, 0, 0, 0, 2, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+$ FAI_160 &lt;dbl&gt; 2, 2, 1, 0, 1, 2, 0, 2, 2, 2, 2, 2, 3, 3, 2, 2, 1, 2, 2, 1, 2,…
+$ FAI_161 &lt;dbl&gt; 0, 1, 2, 0, 0, 0, 0, 1, 1, 3, 3, 3, 2, 3, 3, 2, 1, 2, 2, 1, 0,…
+$ FAI_162 &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0,…
+$ FAI_163 &lt;dbl&gt; 2, 0, 2, 1, 1, 0, 1, 2, 2, 0, 2, 1, 3, 2, 0, 3, 2, 2, 3, 2, 1,…
+$ FAI_164 &lt;dbl&gt; 1, 1, 2, 0, 2, 1, 2, 2, 2, 3, 1, 2, 2, 2, 2, 2, 1, 3, 2, 2, 1,…
+$ FAI_165 &lt;dbl&gt; 0, 1, 0, 2, 2, 1, 0, 2, 2, 1, 2, 2, 1, 1, 2, 3, 3, 4, 1, 2, 1,…
+$ FAI_166 &lt;dbl&gt; 0, 0, 2, 1, 2, 0, 0, 1, 2, 2, 2, 2, 2, 3, 3, 3, 2, 0, 1, 1, 1,…
+$ FAI_167 &lt;dbl&gt; 1, 2, 3, 1, 2, 1, 2, 2, 2, 1, 3, 2, 0, 3, 4, 3, 2, 2, 2, 0, 1,…
+$ FAI_168 &lt;dbl&gt; 1, 0, 0, 2, 2, 0, 0, 2, 0, 2, 0, 0, 0, 1, 2, 0, 0, 1, 0, 1, 0,…
+$ FAI_169 &lt;dbl&gt; 0, 2, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 3, 0, 2, 0, 0, 0, 0, 2, 0,…
+$ FAI_170 &lt;dbl&gt; 0, 0, 0, 1, 1, 0, 0, 1, 1, 3, 3, 2, 4, 4, 3, 4, 2, 2, 3, 1, 0,…
+$ FAI_172 &lt;dbl&gt; 2, 0, 2, 0, 2, 3, 4, 2, 1, 3, 0, 2, 0, 4, 1, 1, 2, 4, 4, 2, 0,…
+$ FAI_173 &lt;dbl&gt; 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 3, 0, 0,…
+$ FAI_176 &lt;dbl&gt; 1, 1, 1, 0, 1, 1, 0, 2, 1, 2, 1, 3, 3, 4, 2, 3, 2, 1, 2, 1, 1,…
+$ FAI_177 &lt;dbl&gt; 1, 1, 3, 0, 2, 1, 1, 2, 2, 2, 2, 2, 1, 3, 3, 3, 3, 2, 2, 1, 1,…
+$ FAI_178 &lt;dbl&gt; 1, 2, 2, 1, 1, 1, 1, 2, 1, 3, 3, 3, 0, 2, 3, 2, 1, 2, 2, 1, 0,…
+$ FAI_179 &lt;dbl&gt; 2, 2, 2, 1, 2, 1, 0, 2, 2, 3, 2, 3, 1, 4, 2, 3, 2, 2, 2, 3, 0,…
+$ FAI_180 &lt;dbl&gt; 0, 0, 1, 0, 0, 0, 0, 2, 1, 2, 4, 4, 2, 4, 4, 4, 2, 0, 0, 0, 0,…
+$ FAI_181 &lt;dbl&gt; 0, 1, 1, 1, 1, 0, 0, 3, 2, 0, 2, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0,…
+$ FAI_183 &lt;dbl&gt; 2, 1, 2, 1, 2, 1, 0, 1, 2, 2, 3, 3, 3, 2, 1, 4, 1, 2, 2, 3, 1,…
+$ FAI_185 &lt;dbl&gt; 0, 0, 1, 0, 3, 0, 0, 3, 0, 0, 4, 0, 0, 3, 3, 2, 2, 0, 1, 0, 2,…
+$ FAI_186 &lt;dbl&gt; 0, 1, 2, 1, 1, 0, 0, 1, 2, 3, 2, 1, 1, 3, 3, 2, 1, 3, 1, 2, 0,…
+$ FAI_187 &lt;dbl&gt; 1, 3, 3, 3, 2, 2, 4, 1, 2, 4, 2, 0, 0, 0, 3, 2, 2, 0, 0, 2, 3,…
+$ FAI_189 &lt;dbl&gt; 1, 4, 2, 4, 2, 3, 4, 2, 1, 3, 4, 2, 4, 3, 3, 2, 4, 2, 1, 4, 3,…
+$ FAI_190 &lt;dbl&gt; 0, 0, 1, 0, 0, 1, 0, 1, 2, 0, 1, 1, 1, 0, 0, 0, 0, 1, 2, 0, 0,…
+$ FAI_191 &lt;dbl&gt; 0, 0, 2, 0, 1, 0, 0, 0, 4, 3, 3, 2, 3, 4, 4, 4, 3, 2, 2, 0, 1,…
+$ FAI_192 &lt;dbl&gt; 1, 1, 0, 0, 1, 0, 0, 1, 2, 3, 3, 2, 3, 3, 2, 3, 1, 2, 2, 1, 1,…
+$ FAI_194 &lt;dbl&gt; 0, 0, 0, 0, 1, 2, 0, 2, 4, 3, 3, 2, 4, 3, 2, 4, 2, 0, 0, 0, 0,…
+$ FAI_195 &lt;dbl&gt; 0, 0, 2, 0, 0, 1, 0, 0, 1, 3, 4, 3, 3, 4, 3, 4, 2, 1, 0, 1, 0,…
+$ FAI_196 &lt;dbl&gt; 0, 0, 1, 0, 0, 0, 1, 2, 0, 1, 4, 2, 0, 0, 1, 0, 0, 4, 2, 0, 0,…
+$ FAI_197 &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…</code></pre>
+</div>
+</div>
+<p>Il data frame <code>df</code> contiene i dati che possono essere utilizzati per la costruzione e validazione del questionario in oggetto.</p>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/ccaudek\.github\.io\/lab-test-psi-quarto\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb24" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "S1: Statistiche descrittive"</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: show</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">UNDER CONSTRUCTION</span><span class="co">]</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>In questa sessione, inizieremo ad affrontare la sequenza di operazioni necessarie per la validazione di un reattivo psicologico, come descritto da:</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dima, A.L. (2018). *Scale validation in applied health research: tutorial for a 6-step R-based psychometrics protocol*. Health Psychology and Behavioral Medicine, 6(1), 136-161.</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>Il primo passo riguarda le statistiche descrittive, che sarà l'argomento principale di questa sessione. Durante l'incontro, esploreremo i seguenti aspetti:</span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Identificazione di item senza o con pochissima variazione.</span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Analisi delle differenze tra gli item riguardo alle loro distribuzioni.</span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Esame delle correlazioni negative tra gli item.</span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rilevazione di rispondenti con pattern di risposta insoliti.</span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a><span class="fu">## Preparazione del notebook</span></span>
+<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>({</span>
+<span id="cb24-28"><a href="#cb24-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(tidyverse)</span>
+<span id="cb24-29"><a href="#cb24-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(here)</span>
+<span id="cb24-30"><a href="#cb24-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(rio)</span>
+<span id="cb24-31"><a href="#cb24-31" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb24-32"><a href="#cb24-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-33"><a href="#cb24-33" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">max.print =</span> <span class="dv">1000000</span>)</span>
+<span id="cb24-34"><a href="#cb24-34" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb24-35"><a href="#cb24-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-36"><a href="#cb24-36" aria-hidden="true" tabindex="-1"></a><span class="fu">## Strategie di Coping per Genitori con Figli Oncologici</span></span>
+<span id="cb24-37"><a href="#cb24-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-38"><a href="#cb24-38" aria-hidden="true" tabindex="-1"></a>In questo laboratorio, utilizzeremo il pool di item relativi allo screening delle famiglie di pazienti oncologici sviluppato dall'equipe di psicologi del Meyer. L'obiettivo è creare un questionario capace di identificare le famiglie con strategie di coping meno efficaci, così da poter fornire il supporto psicologico necessario a quelle che ne hanno più bisogno, considerando le risorse limitate disponibili.</span>
+<span id="cb24-39"><a href="#cb24-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-40"><a href="#cb24-40" aria-hidden="true" tabindex="-1"></a>Importiamo il file che contiene le seguenti informazioni: il contenuto degli item, il codice di ciascun item, l'area tematica di appartenenza e la sottoscala di ciascun item.</span>
+<span id="cb24-41"><a href="#cb24-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-44"><a href="#cb24-44" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb24-45"><a href="#cb24-45" aria-hidden="true" tabindex="-1"></a>items <span class="ot">&lt;-</span> rio<span class="sc">::</span><span class="fu">import</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"aree_tematiche_items.csv"</span>))</span>
+<span id="cb24-46"><a href="#cb24-46" aria-hidden="true" tabindex="-1"></a>items<span class="sc">$</span>Area <span class="ot">&lt;-</span> <span class="fu">factor</span>(items<span class="sc">$</span>Area)</span>
+<span id="cb24-47"><a href="#cb24-47" aria-hidden="true" tabindex="-1"></a>items<span class="sc">$</span>Subscale <span class="ot">&lt;-</span> <span class="fu">factor</span>(items<span class="sc">$</span>Subscale)</span>
+<span id="cb24-48"><a href="#cb24-48" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(items)</span>
+<span id="cb24-49"><a href="#cb24-49" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb24-50"><a href="#cb24-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-53"><a href="#cb24-53" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb24-54"><a href="#cb24-54" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(items<span class="sc">$</span>Area)</span>
+<span id="cb24-55"><a href="#cb24-55" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb24-56"><a href="#cb24-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-59"><a href="#cb24-59" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb24-60"><a href="#cb24-60" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(items<span class="sc">$</span>Subscale)</span>
+<span id="cb24-61"><a href="#cb24-61" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb24-62"><a href="#cb24-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-65"><a href="#cb24-65" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb24-66"><a href="#cb24-66" aria-hidden="true" tabindex="-1"></a>items<span class="sc">$</span>Description</span>
+<span id="cb24-67"><a href="#cb24-67" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb24-68"><a href="#cb24-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-69"><a href="#cb24-69" aria-hidden="true" tabindex="-1"></a><span class="fu">## Dati </span></span>
+<span id="cb24-70"><a href="#cb24-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-71"><a href="#cb24-71" aria-hidden="true" tabindex="-1"></a>Importiamo i dati e stampiamo i nomi delle variabili contenuti nell'oggetto <span class="in">`complete_data`</span>.</span>
+<span id="cb24-72"><a href="#cb24-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-75"><a href="#cb24-75" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb24-76"><a href="#cb24-76" aria-hidden="true" tabindex="-1"></a>destfile <span class="ot">&lt;-</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"fai_2022_11_20.rds"</span>)</span>
+<span id="cb24-77"><a href="#cb24-77" aria-hidden="true" tabindex="-1"></a>complete_data <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(destfile)</span>
+<span id="cb24-78"><a href="#cb24-78" aria-hidden="true" tabindex="-1"></a><span class="co"># Add random idx for each participant.</span></span>
+<span id="cb24-79"><a href="#cb24-79" aria-hidden="true" tabindex="-1"></a>complete_data<span class="sc">$</span>idx <span class="ot">&lt;-</span> ids<span class="sc">::</span><span class="fu">random_id</span>(<span class="fu">nrow</span>(complete_data), <span class="dv">4</span>)</span>
+<span id="cb24-80"><a href="#cb24-80" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(complete_data)</span>
+<span id="cb24-81"><a href="#cb24-81" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb24-82"><a href="#cb24-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-85"><a href="#cb24-85" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb24-86"><a href="#cb24-86" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(complete_data)</span>
+<span id="cb24-87"><a href="#cb24-87" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb24-88"><a href="#cb24-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-89"><a href="#cb24-89" aria-hidden="true" tabindex="-1"></a>Rimuoviamo i partecipanti con la FLAG del *careless responding*.</span>
+<span id="cb24-90"><a href="#cb24-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-93"><a href="#cb24-93" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb24-94"><a href="#cb24-94" aria-hidden="true" tabindex="-1"></a>temp <span class="ot">&lt;-</span> complete_data <span class="sc">|&gt;</span> </span>
+<span id="cb24-95"><a href="#cb24-95" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(FLAG <span class="sc">==</span> <span class="st">"keep"</span>)</span>
+<span id="cb24-96"><a href="#cb24-96" aria-hidden="true" tabindex="-1"></a>temp<span class="sc">$</span>FLAG <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb24-97"><a href="#cb24-97" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb24-98"><a href="#cb24-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-101"><a href="#cb24-101" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb24-102"><a href="#cb24-102" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(temp)</span>
+<span id="cb24-103"><a href="#cb24-103" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb24-104"><a href="#cb24-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-107"><a href="#cb24-107" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb24-108"><a href="#cb24-108" aria-hidden="true" tabindex="-1"></a>items_df <span class="ot">&lt;-</span> temp <span class="sc">%&gt;%</span> </span>
+<span id="cb24-109"><a href="#cb24-109" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"FAI_"</span>))</span>
+<span id="cb24-110"><a href="#cb24-110" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb24-111"><a href="#cb24-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-112"><a href="#cb24-112" aria-hidden="true" tabindex="-1"></a>Tutti gli item sono stati inizialmente esaminati per verificarne la normalità, seguendo le raccomandazioni secondo cui i valori di skewness degli item non dovrebbero superare 2 o 3 e i valori di kurtosis non dovrebbero superare 7 o 8 (Curran et al., 1996; Finney &amp; DiStefano, 2006).</span>
+<span id="cb24-113"><a href="#cb24-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-116"><a href="#cb24-116" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb24-117"><a href="#cb24-117" aria-hidden="true" tabindex="-1"></a>items_stats <span class="ot">&lt;-</span> psych<span class="sc">::</span><span class="fu">describe</span>(items_df)</span>
+<span id="cb24-118"><a href="#cb24-118" aria-hidden="true" tabindex="-1"></a>items_stats</span>
+<span id="cb24-119"><a href="#cb24-119" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb24-120"><a href="#cb24-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-123"><a href="#cb24-123" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb24-124"><a href="#cb24-124" aria-hidden="true" tabindex="-1"></a>items_skew_kurt_bad <span class="ot">&lt;-</span> items_stats <span class="sc">|&gt;</span> </span>
+<span id="cb24-125"><a href="#cb24-125" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(skew <span class="sc">&gt;</span> <span class="fl">2.5</span> <span class="sc">|</span> kurtosis <span class="sc">&gt;</span> <span class="fl">7.5</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb24-126"><a href="#cb24-126" aria-hidden="true" tabindex="-1"></a>  <span class="fu">row.names</span>()</span>
+<span id="cb24-127"><a href="#cb24-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-128"><a href="#cb24-128" aria-hidden="true" tabindex="-1"></a>items_skew_kurt_bad</span>
+<span id="cb24-129"><a href="#cb24-129" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb24-130"><a href="#cb24-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-133"><a href="#cb24-133" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb24-134"><a href="#cb24-134" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> items_df <span class="sc">|&gt;</span> </span>
+<span id="cb24-135"><a href="#cb24-135" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">!</span><span class="fu">any_of</span>(items_skew_kurt_bad))</span>
+<span id="cb24-136"><a href="#cb24-136" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(df)</span>
+<span id="cb24-137"><a href="#cb24-137" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb24-138"><a href="#cb24-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-139"><a href="#cb24-139" aria-hidden="true" tabindex="-1"></a>Il data frame <span class="in">`df`</span> contiene i dati che possono essere utilizzati per la costruzione e validazione del questionario in oggetto.</span>
+<span id="cb24-140"><a href="#cb24-140" aria-hidden="true" tabindex="-1"></a></span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
