@@ -42,23 +42,37 @@
   {
     "objectID": "homeworks/hw1.html",
     "href": "homeworks/hw1.html",
-    "title": "H1: Statistiche descrittive",
+    "title": "H1: Distribuzione normale, asimmetria e curtosi",
     "section": "",
-    "text": "[UNDER CONSTRUCTION]"
+    "text": "Distribuzione Normale: Discutere le proprietà fondamentali della distribuzione normale, inclusa la sua simmetria e i parametri di media (μ) e deviazione standard (σ).\nFunzioni norm in R:\n\nd-norm: Calcola la densità di probabilità.\np-norm: Calcola la funzione di distribuzione cumulativa.\nq-norm: Calcola il quantile (percentile).\nr-norm: Genera numeri casuali dalla distribuzione normale.\n\nEsempi e Grafici: Fornire esempi pratici e creare grafici che illustrano l’uso di queste funzioni in R.\n\nEsempi in R\n\n\nCode\nx &lt;- seq(-3, 3, by=0.1)\ny &lt;- dnorm(x, mean=0, sd=1)\nplot(x, y, type=\"l\", main=\"Funzione di Densità della Distribuzione Normale\")\n\n\n\n\n\n\n\n\n\nCode\n# Funzione di Distribuzione Cumulativa\nplot(x, pnorm(x, mean=0, sd=1), type=\"l\", main=\"Funzione di Distribuzione Cumulativa\")"
   },
   {
-    "objectID": "homeworks/hw1.html#assignment-spiegazione-di-asimmetria-e-curtosi",
-    "href": "homeworks/hw1.html#assignment-spiegazione-di-asimmetria-e-curtosi",
-    "title": "H1: Statistiche descrittive",
-    "section": "Assignment: Spiegazione di Asimmetria e Curtosi",
-    "text": "Assignment: Spiegazione di Asimmetria e Curtosi\n\n1. Introduzione alla Distribuzione Normale\n\nDistribuzione Normale: Discutere le proprietà fondamentali della distribuzione normale, inclusa la sua simmetria e i parametri di media (μ) e deviazione standard (σ).\nFunzioni norm in R:\n\nd-norm: Calcola la densità di probabilità.\np-norm: Calcola la funzione di distribuzione cumulativa.\nq-norm: Calcola il quantile (percentile).\nr-norm: Genera numeri casuali dalla distribuzione normale.\n\nEsempi e Grafici: Fornire esempi pratici e creare grafici che illustrano l’uso di queste funzioni in R.\n\n\n\nCode\n# Esempio in R\nx &lt;- seq(-3, 3, by=0.1)\ny &lt;- dnorm(x, mean=0, sd=1)\nplot(x, y, type=\"l\", main=\"Funzione di Densità della Distribuzione Normale\")\n\n\n\n\n\n\n\n\n\nCode\n# Funzione di Distribuzione Cumulativa\nplot(x, pnorm(x, mean=0, sd=1), type=\"l\", main=\"Funzione di Distribuzione Cumulativa\")\n\n\n\n\n\n\n\n\n\n\n\n2. Grafici per Spiegare Asimmetria e Curtosi\n\nCreazione dei Grafici: Utilizzare R o Python per creare grafici che spiegano i concetti di asimmetria e curtosi.\n\nAsimmetria: Misura della simmetria della distribuzione.\nCurtosi: Misura della “punta” della distribuzione.\n\n\n\n\nCode\n# Esempio di Asimmetria e Curtosi in R\nlibrary(moments)\n\n# Generare dati con diverse asimmetrie e curtosi\nset.seed(123)\ndata_symmetric &lt;- rnorm(1000)\ndata_skewed &lt;- rlnorm(1000)\ndata_leptokurtic &lt;- rt(1000, df=3)\n\n# Plot\npar(mfrow=c(3,1))\nhist(data_symmetric, main=\"Distribuzione Simmetrica\", probability=TRUE)\nhist(data_skewed, main=\"Distribuzione Asimmetrica\", probability=TRUE)\nhist(data_leptokurtic, main=\"Distribuzione Leptocurtica\", probability=TRUE)\n\n\n\n\n\n\n\n\n\n\n\n3. Calcolo di Asimmetria e Curtosi in R\n\nFunzioni R:\n\nAsimmetria: Utilizzare skewness() per calcolare l’asimmetria.\nCurtosi: Utilizzare kurtosis() per calcolare la curtosi.\n\n\n\n\nCode\n# Calcolo di Asimmetria e Curtosi\nskewness(data_symmetric)\n\n\n[1] 0.06529391\n\n\nCode\nkurtosis(data_symmetric)\n\n\n[1] 2.925747\n\n\nCode\nskewness(data_skewed)\n\n\n[1] 5.502032\n\n\nCode\nkurtosis(data_skewed)\n\n\n[1] 49.9249\n\n\nCode\nskewness(data_leptokurtic)\n\n\n[1] 0.008589252\n\n\nCode\nkurtosis(data_leptokurtic)\n\n\n[1] 7.347333"
+    "objectID": "homeworks/hw1.html#introduzione-alla-distribuzione-normale",
+    "href": "homeworks/hw1.html#introduzione-alla-distribuzione-normale",
+    "title": "H1: Distribuzione normale, asimmetria e curtosi",
+    "section": "",
+    "text": "Distribuzione Normale: Discutere le proprietà fondamentali della distribuzione normale, inclusa la sua simmetria e i parametri di media (μ) e deviazione standard (σ).\nFunzioni norm in R:\n\nd-norm: Calcola la densità di probabilità.\np-norm: Calcola la funzione di distribuzione cumulativa.\nq-norm: Calcola il quantile (percentile).\nr-norm: Genera numeri casuali dalla distribuzione normale.\n\nEsempi e Grafici: Fornire esempi pratici e creare grafici che illustrano l’uso di queste funzioni in R.\n\nEsempi in R\n\n\nCode\nx &lt;- seq(-3, 3, by=0.1)\ny &lt;- dnorm(x, mean=0, sd=1)\nplot(x, y, type=\"l\", main=\"Funzione di Densità della Distribuzione Normale\")\n\n\n\n\n\n\n\n\n\nCode\n# Funzione di Distribuzione Cumulativa\nplot(x, pnorm(x, mean=0, sd=1), type=\"l\", main=\"Funzione di Distribuzione Cumulativa\")"
   },
   {
-    "objectID": "homeworks/hw1.html#compiti",
-    "href": "homeworks/hw1.html#compiti",
-    "title": "H1: Statistiche descrittive",
-    "section": "Compiti",
-    "text": "Compiti\n\nDistribuzione Normale:\n\nDiscutere le proprietà della distribuzione normale.\nSpiegare e fornire esempi delle funzioni d-norm, p-norm, q-norm, e r-norm in R.\nCreare grafici illustrativi in R.\n\nGrafici di Asimmetria e Curtosi:\n\nCreare grafici utilizzando R o Python che spiegano i concetti di asimmetria e curtosi.\nInterpretare i grafici creati e discutere le differenze tra distribuzioni simmetriche, asimmetriche e con diversa curtosi.\n\nCalcolo di Asimmetria e Curtosi:\n\nUtilizzare le funzioni appropriate in R per calcolare asimmetria e curtosi dei dataset forniti.\nInterpretare i risultati e discutere le implicazioni per la distribuzione dei dati.\n\n\nIl data frame df contiene i dati che possono essere utilizzati per la costruzione e validazione del questionario in oggetto."
+    "objectID": "homeworks/hw1.html#grafici-per-spiegare-asimmetria-e-curtosi",
+    "href": "homeworks/hw1.html#grafici-per-spiegare-asimmetria-e-curtosi",
+    "title": "H1: Distribuzione normale, asimmetria e curtosi",
+    "section": "2. Grafici per Spiegare Asimmetria e Curtosi",
+    "text": "2. Grafici per Spiegare Asimmetria e Curtosi\n\nCreazione dei Grafici: Utilizzare R o Python per creare grafici che spiegano i concetti di asimmetria e curtosi.\n\nAsimmetria: Misura della simmetria della distribuzione.\nCurtosi: Misura della “punta” della distribuzione.\n\n\n** Esempio di Asimmetria e Curtosi in R**\n\n\nCode\nlibrary(moments)\n\n# Generare dati con diverse asimmetrie e curtosi\nset.seed(123)\ndata_symmetric &lt;- rnorm(1000)\ndata_skewed &lt;- rlnorm(1000)\ndata_leptokurtic &lt;- rt(1000, df=3)\n\n# Plot\npar(mfrow=c(3,1))\nhist(data_symmetric, main=\"Distribuzione Simmetrica\", probability=TRUE)\nhist(data_skewed, main=\"Distribuzione Asimmetrica\", probability=TRUE)\nhist(data_leptokurtic, main=\"Distribuzione Leptocurtica\", probability=TRUE)"
+  },
+  {
+    "objectID": "homeworks/hw1.html#calcolo-di-asimmetria-e-curtosi-in-r",
+    "href": "homeworks/hw1.html#calcolo-di-asimmetria-e-curtosi-in-r",
+    "title": "H1: Distribuzione normale, asimmetria e curtosi",
+    "section": "3. Calcolo di Asimmetria e Curtosi in R",
+    "text": "3. Calcolo di Asimmetria e Curtosi in R\n\nFunzioni R:\n\nAsimmetria: Utilizzare skewness() per calcolare l’asimmetria.\nCurtosi: Utilizzare kurtosis() per calcolare la curtosi.\n\n\n\n\nCode\n# Calcolo di Asimmetria e Curtosi\nskewness(data_symmetric)\n\n\n[1] 0.06529391\n\n\nCode\nkurtosis(data_symmetric)\n\n\n[1] 2.925747\n\n\nCode\nskewness(data_skewed)\n\n\n[1] 5.502032\n\n\nCode\nkurtosis(data_skewed)\n\n\n[1] 49.9249\n\n\nCode\nskewness(data_leptokurtic)\n\n\n[1] 0.008589252\n\n\nCode\nkurtosis(data_leptokurtic)\n\n\n[1] 7.347333"
+  },
+  {
+    "objectID": "homeworks/hw1.html#applicazioni",
+    "href": "homeworks/hw1.html#applicazioni",
+    "title": "H1: Distribuzione normale, asimmetria e curtosi",
+    "section": "4. Applicazioni:",
+    "text": "4. Applicazioni:\nDopo avere spiegato i concetti precedenti, utilizzarli in relazione ai dati relativi agli item del questionario FAI."
   },
   {
     "objectID": "study_method.html",
@@ -213,9 +227,9 @@
     "href": "index.html",
     "title": "Laboratorio di Testing Psicologico",
     "section": "",
-    "text": "Ed\n\n  DataHub\n\n  Gradescope\n\n\nNo matching items\n[UNDER CONSTRUCTION]",
+    "text": "Quarto\n\n  Posit\n\n  Tidyverse\n\n  Python\n\n  GitHub\n\n\nNo matching items\n[UNDER CONSTRUCTION]",
     "crumbs": [
-      "Home / Schedule"
+      "Home"
     ]
   },
   {
@@ -223,9 +237,9 @@
     "href": "index.html#calendario",
     "title": "Laboratorio di Testing Psicologico",
     "section": "Calendario",
-    "text": "Calendario\nHere we use Quarto’s EJS templating.\nFor a style similar to that of Stat 20, modify index.qmd to point to assets/{schedule-alt.ejs,buttons-alt.ejs} and to {schedule-alt.yml,buttons-alt.yml} and _quarto.yml to point to assets/styles-alt.scss.\n\n\n   Week 1\n\n   \n   \n   \n   \n   \n   \n\n        \n\n           \n           \n           Aug 24:\n           \n           Lecture 1 Presentazione\n           \n                \n                \n                  Note 1\n                  \n                  Note 2\n                  \n                \n           \n                \n           \n        \n\n           \n           \n           Participation 1 Lecture Participation 1\n           \n                \n           \n                \n           \n        \n   \n\n        \n\n           \n           \n           Aug 25:\n           \n           Lab 1 Statistiche descrittive (consegna 5 Marzo)\n           \n                \n           \n                \n           \n        \n\n           \n           \n           Homework 1A Plotting and Permutation Test (due Aug 31)\n           \n                \n           \n                \n           \n        \n\n           \n           \n           Homework 1B Prerequisite Math (due Aug 31)\n           \n                \n           \n                \n           \n        \n   \n   \n   \n  \n\n   Week 2\n\n   \n   \n   \n   \n   \n   \n\n        \n\n           \n           \n           Aug 29:\n           \n           Lecture 2 Pandas 1\n           \n                \n           \n                \n           \n        \n\n           \n           \n           Participation 2 Lecture Participation 2\n           \n                \n                \n                \n           \n                \n           \n        \n   \n   \n   \n  \n\n\nNo matching items",
+    "text": "Calendario\n\n\n   Week 1\n\n   \n   \n   \n   \n   \n   \n\n        \n\n           \n           \n           Marzo 3:\n           \n           Lecture 1 Presentazione\n           \n                \n           \n                \n           \n        \n   \n\n        \n\n           \n           \n           Marzo 6:\n           \n           Lab 1 Statistiche descrittive\n           \n                \n           \n                \n           \n        \n\n           \n           \n           Homework 1A Distribuzione normale, asimmetria, curtosi\n           \n                \n           \n                \n           \n        \n\n           \n           \n           Homework 1B Step 1 (Dima, 2018)\n           \n                \n           \n                \n           \n        \n   \n   \n   \n  \n\n   Week 2\n\n   \n   \n   \n   \n   \n   \n\n        \n\n           \n           \n           Marzo 10:\n           \n           Lecture 2 Pandas 1\n           \n                \n           \n                \n           \n        \n\n           \n           \n           Participation 2 Lecture Participation 2\n           \n                \n                \n                \n           \n                \n           \n        \n   \n   \n   \n  \n\n\nNo matching items",
     "crumbs": [
-      "Home / Schedule"
+      "Home"
     ]
   },
   {
@@ -251,7 +265,7 @@
     "href": "units/unit3.html#evaluated-python-code-chunk-with-a-plot",
     "title": "Unit 3: More",
     "section": "Evaluated Python code chunk, with a plot",
-    "text": "Evaluated Python code chunk, with a plot\n\n\nCode\nimport numpy as np\nx = np.random.normal(size=100)\nimport matplotlib.pyplot as plt\nplt.hist(x)\nplt.show()\nnp.mean(x)\n\n\n\n\n\n\n\n\n\n-0.222096242494802",
+    "text": "Evaluated Python code chunk, with a plot\n\n\nCode\nimport numpy as np\nx = np.random.normal(size=100)\nimport matplotlib.pyplot as plt\nplt.hist(x)\nplt.show()\nnp.mean(x)\n\n\n\n\n\n\n\n\n\n0.04550499154847427",
     "crumbs": [
       "Sessioni",
       "Unit 3: More"
@@ -295,7 +309,7 @@
     "href": "units/unit0.html#esecuzione-di-codice-python-con-un-grafico",
     "title": "Introduzione a R e Quarto",
     "section": "Esecuzione di codice Python, con un grafico",
-    "text": "Esecuzione di codice Python, con un grafico\n\n\nCode\nimport numpy as np\nx = np.random.normal(size=100)\nimport matplotlib.pyplot as plt\nplt.hist(x)\nplt.show()\nnp.mean(x)\n\n\n\n\n\n\n\n\n\n0.09514928651264457",
+    "text": "Esecuzione di codice Python, con un grafico\n\n\nCode\nimport numpy as np\nx = np.random.normal(size=100)\nimport matplotlib.pyplot as plt\nplt.hist(x)\nplt.show()\nnp.mean(x)\n\n\n\n\n\n\n\n\n\n-0.10754505823689918",
     "crumbs": [
       "Sessioni",
       "Introduzione a R e Quarto"
@@ -370,7 +384,17 @@
     "href": "syllabus.html",
     "title": "Syllabus",
     "section": "",
-    "text": "Questo laboratorio, offerto all’interno di un corso di laurea magistrale, ha l’obiettivo di sviluppare competenze teorico-pratiche relative alla costruzione e validazione di reattivi psicologici. Il laboratorio sarà strutturato in una serie di esercitazioni pratiche che illustreranno le varie fasi necessarie per la costruzione e validazione di questi strumenti.\n\n\nDopo aver completato con successo questo Laboratorio, gli studenti saranno in grado di:\n\nUtilizzare il software R per l’analisi dei dati psicometrici.\nRiconoscere variazioni, distribuzioni e pattern di risposta insoliti negli item.\nValutare la coerenza e la formazione di scale unidimensionali o multidimensionali.\nAnalizzare la misurazione additiva e la difficoltà degli item.\nApplicare concetti di algebra lineare nelle analisi psicometriche.\nDeterminare il numero ottimale di dimensioni e la struttura di un test psicometrico.\nValutare l’affidabilità delle scale e l’associazione degli item con il punteggio totale.\nAnalizzare la distribuzione dei punteggi totali e identificare effetti di soffitto o pavimento.\nUtilizzare modelli di equazioni strutturali (SEM) per la validazione dei costrutti.\nSviluppare e presentare progetti sulla validazione di reattivi psicometrici.\n\n\n\n\nIl laboratorio prevede lezioni teoriche integrate con esercitazioni pratiche. Gli studenti utilizzeranno software statistici avanzati per applicare le tecniche apprese durante le lezioni.\n\n\n\nLa valutazione degli studenti si baserà su esercitazioni pratiche, progetti di gruppo e una prova finale che includerà sia aspetti teorici che pratici.\n\n\n\nÈ richiesta una conoscenza di base dell’analisi statistica applicata alla psicologia, inclusi i concetti fondamentali della teoria delle probabilità e del modello di regressione lineare. Si consiglia di consultare i corsi di Psicometria e di Testing Psicologico.\n\n\n\n\n\nData la mia presenza in diversi corsi durante il semestre, non sarà possibile rispondere alle domande in aula dopo le lezioni. Tuttavia, sono disponibile tramite Moodle per organizzare incontri di gruppo su Google Meet, per rispondere alle vostre domande e fornire chiarimenti.\n\n\n\nLa partecipazione attiva e il rispetto reciproco sono fondamentali. Incoraggio gli studenti a contribuire alle discussioni, offrendo punti di vista differenti e mettendo in discussione le idee degli altri, comprese le mie, in modo rispettoso e costruttivo.\n\n\n\nPrima di inviare una richiesta via e-mail, consultate il sito web del corso per verificare se le informazioni cercate sono già disponibili. Per organizzare un incontro, inviatemi un messaggio tramite Moodle. Preferisco pianificare incontri di gruppo, ma possiamo concordare appuntamenti individuali se necessario.\n\n\n\nL’integrità accademica è essenziale. Qualsiasi forma di comportamento disonesto, come l’uso di aiuti non autorizzati o il plagio, sarà sanzionata secondo le politiche accademiche in vigore.\n\n\n\nGli studenti con bisogni educativi speciali sono invitati a comunicarmelo in modo confidenziale il prima possibile. Rispetto pienamente il diritto alla privacy in materia.\n\n\n\nIl successo nel corso dipende principalmente dall’impegno degli studenti. Non esitate a chiedere aiuto ai compagni di classe o a me per chiarimenti su ciò che non avete compreso.",
+    "text": "Il Laboratorio di Testing Psicologico, rivolto agli studenti del secondo anno del Corso di Laurea Magistrale (LM-51) in Psicologia Clinica e della Salute e Neuropsicologia dell’Università degli Studi di Firenze, ha l’obiettivo di sviluppare competenze teorico-pratiche relative alla costruzione e validazione di reattivi psicologici. Il laboratorio sarà strutturato in una serie di esercitazioni pratiche che illustreranno le varie fasi necessarie per la costruzione e validazione di questi strumenti.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#descrizione-dellinsegnamento",
+    "href": "syllabus.html#descrizione-dellinsegnamento",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Il Laboratorio di Testing Psicologico, rivolto agli studenti del secondo anno del Corso di Laurea Magistrale (LM-51) in Psicologia Clinica e della Salute e Neuropsicologia dell’Università degli Studi di Firenze, ha l’obiettivo di sviluppare competenze teorico-pratiche relative alla costruzione e validazione di reattivi psicologici. Il laboratorio sarà strutturato in una serie di esercitazioni pratiche che illustreranno le varie fasi necessarie per la costruzione e validazione di questi strumenti.",
     "crumbs": [
       "Syllabus"
     ]
@@ -379,8 +403,8 @@
     "objectID": "syllabus.html#obiettivi-di-apprendimento",
     "href": "syllabus.html#obiettivi-di-apprendimento",
     "title": "Syllabus",
-    "section": "",
-    "text": "Dopo aver completato con successo questo Laboratorio, gli studenti saranno in grado di:\n\nUtilizzare il software R per l’analisi dei dati psicometrici.\nRiconoscere variazioni, distribuzioni e pattern di risposta insoliti negli item.\nValutare la coerenza e la formazione di scale unidimensionali o multidimensionali.\nAnalizzare la misurazione additiva e la difficoltà degli item.\nApplicare concetti di algebra lineare nelle analisi psicometriche.\nDeterminare il numero ottimale di dimensioni e la struttura di un test psicometrico.\nValutare l’affidabilità delle scale e l’associazione degli item con il punteggio totale.\nAnalizzare la distribuzione dei punteggi totali e identificare effetti di soffitto o pavimento.\nUtilizzare modelli di equazioni strutturali (SEM) per la validazione dei costrutti.\nSviluppare e presentare progetti sulla validazione di reattivi psicometrici.",
+    "section": "Obiettivi di Apprendimento",
+    "text": "Obiettivi di Apprendimento\nDopo aver completato con successo questo Laboratorio, gli studenti saranno in grado di:\n\nUtilizzare il software R per l’analisi dei dati psicometrici.\nRiconoscere variazioni, distribuzioni e pattern di risposta insoliti negli item.\nValutare la coerenza e la formazione di scale unidimensionali o multidimensionali.\nAnalizzare la misurazione additiva e la difficoltà degli item.\nApplicare concetti di algebra lineare nelle analisi psicometriche.\nDeterminare il numero ottimale di dimensioni e la struttura di un test psicometrico.\nValutare l’affidabilità delle scale e l’associazione degli item con il punteggio totale.\nAnalizzare la distribuzione dei punteggi totali e identificare effetti di soffitto o pavimento.\nUtilizzare modelli di equazioni strutturali (SEM) per la validazione dei costrutti.\nSviluppare e presentare progetti sulla validazione di reattivi psicometrici.",
     "crumbs": [
       "Syllabus"
     ]
@@ -389,8 +413,8 @@
     "objectID": "syllabus.html#metodologia-didattica",
     "href": "syllabus.html#metodologia-didattica",
     "title": "Syllabus",
-    "section": "",
-    "text": "Il laboratorio prevede lezioni teoriche integrate con esercitazioni pratiche. Gli studenti utilizzeranno software statistici avanzati per applicare le tecniche apprese durante le lezioni.",
+    "section": "Metodologia Didattica",
+    "text": "Metodologia Didattica\nIl laboratorio prevede lezioni teoriche integrate con esercitazioni pratiche. Gli studenti utilizzeranno software statistici avanzati per applicare le tecniche apprese durante le lezioni.",
     "crumbs": [
       "Syllabus"
     ]
@@ -399,8 +423,8 @@
     "objectID": "syllabus.html#valutazione",
     "href": "syllabus.html#valutazione",
     "title": "Syllabus",
-    "section": "",
-    "text": "La valutazione degli studenti si baserà su esercitazioni pratiche, progetti di gruppo e una prova finale che includerà sia aspetti teorici che pratici.",
+    "section": "Valutazione",
+    "text": "Valutazione\nLa valutazione degli studenti si baserà su esercitazioni pratiche, progetti di gruppo e una prova finale che includerà sia aspetti teorici che pratici.",
     "crumbs": [
       "Syllabus"
     ]
@@ -409,8 +433,8 @@
     "objectID": "syllabus.html#prerequisiti",
     "href": "syllabus.html#prerequisiti",
     "title": "Syllabus",
-    "section": "",
-    "text": "È richiesta una conoscenza di base dell’analisi statistica applicata alla psicologia, inclusi i concetti fondamentali della teoria delle probabilità e del modello di regressione lineare. Si consiglia di consultare i corsi di Psicometria e di Testing Psicologico.",
+    "section": "Prerequisiti",
+    "text": "Prerequisiti\nÈ richiesta una conoscenza di base dell’analisi statistica applicata alla psicologia, inclusi i concetti fondamentali della teoria delle probabilità e del modello di regressione lineare. Si consiglia di consultare i corsi di Psicometria e di Testing Psicologico.",
     "crumbs": [
       "Syllabus"
     ]
@@ -419,8 +443,8 @@
     "objectID": "syllabus.html#ulteriori-informazioni",
     "href": "syllabus.html#ulteriori-informazioni",
     "title": "Syllabus",
-    "section": "",
-    "text": "Data la mia presenza in diversi corsi durante il semestre, non sarà possibile rispondere alle domande in aula dopo le lezioni. Tuttavia, sono disponibile tramite Moodle per organizzare incontri di gruppo su Google Meet, per rispondere alle vostre domande e fornire chiarimenti.\n\n\n\nLa partecipazione attiva e il rispetto reciproco sono fondamentali. Incoraggio gli studenti a contribuire alle discussioni, offrendo punti di vista differenti e mettendo in discussione le idee degli altri, comprese le mie, in modo rispettoso e costruttivo.\n\n\n\nPrima di inviare una richiesta via e-mail, consultate il sito web del corso per verificare se le informazioni cercate sono già disponibili. Per organizzare un incontro, inviatemi un messaggio tramite Moodle. Preferisco pianificare incontri di gruppo, ma possiamo concordare appuntamenti individuali se necessario.\n\n\n\nL’integrità accademica è essenziale. Qualsiasi forma di comportamento disonesto, come l’uso di aiuti non autorizzati o il plagio, sarà sanzionata secondo le politiche accademiche in vigore.\n\n\n\nGli studenti con bisogni educativi speciali sono invitati a comunicarmelo in modo confidenziale il prima possibile. Rispetto pienamente il diritto alla privacy in materia.\n\n\n\nIl successo nel corso dipende principalmente dall’impegno degli studenti. Non esitate a chiedere aiuto ai compagni di classe o a me per chiarimenti su ciò che non avete compreso.",
+    "section": "Ulteriori informazioni",
+    "text": "Ulteriori informazioni\n\nRicevimento\nData la mia presenza in diversi corsi durante il semestre, non sarà possibile rispondere alle domande in aula dopo le lezioni. Tuttavia, sono disponibile tramite Moodle per organizzare incontri di gruppo su Google Meet, per rispondere alle vostre domande e fornire chiarimenti.\n\n\nComportamento in aula\nLa partecipazione attiva e il rispetto reciproco sono fondamentali. Incoraggio gli studenti a contribuire alle discussioni, offrendo punti di vista differenti e mettendo in discussione le idee degli altri, comprese le mie, in modo rispettoso e costruttivo.\n\n\nNorme relative all’uso della posta elettronica\nPrima di inviare una richiesta via e-mail, consultate il sito web del corso per verificare se le informazioni cercate sono già disponibili. Per organizzare un incontro, inviatemi un messaggio tramite Moodle. Preferisco pianificare incontri di gruppo, ma possiamo concordare appuntamenti individuali se necessario.\n\n\nPolitica sulla disonestà accademica\nL’integrità accademica è essenziale. Qualsiasi forma di comportamento disonesto, come l’uso di aiuti non autorizzati o il plagio, sarà sanzionata secondo le politiche accademiche in vigore.\n\n\nPolitica sulle disabilità\nGli studenti con bisogni educativi speciali sono invitati a comunicarmelo in modo confidenziale il prima possibile. Rispetto pienamente il diritto alla privacy in materia.\n\n\nConsiderazioni finali\nIl successo nel corso dipende principalmente dall’impegno degli studenti. Non esitate a chiedere aiuto ai compagni di classe o a me per chiarimenti su ciò che non avete compreso.",
     "crumbs": [
       "Syllabus"
     ]
