@@ -1,0 +1,35 @@
+---
+title: "Materiali Didattici e Metodi di Apprendimento"
+---
+
+## Libri di testo
+
+- Rex B. Kline (2023). [Principles and Practice of Structural Equation Modeling](https://www.guilford.com/books/Principles-and-Practice-of-Structural-Equation-Modeling/Rex-Kline/9781462551910). New York: Guildford.
+- American Educational Research Association, American Psychological Association & National Council on Measurement in Education (2014). [Standards for educational and psychological testing](https://www.aera.net/Publications/Books/Standards-for-Educational-Psychological-Testing-2014-Edition). Washington, DC: AERA.
+- Douglas, A., Roos, D., Mancini, F., Couto, A. & Lusseau, D. (2023). [An Introduction to R](https://intro2r.com)
+- Sophie Lee (2024). [Introduction to R with Tidyverse](https://introduction-r-tidyverse.netlify.app)
+
+## Articoli
+
+- Dima, A.L. (2018). Scale validation in applied health research: tutorial for a 6-step R-based psychometrics protocol. *Health Psychology and Behavioral Medicine*, *6*(1), 136--161.
+
+
+## Letture supplementari:
+
+- Brown, T.A. (2006). _Confirmatory Factor Analysis for Applied Research_. Guilford Press.
+- de Ayala, R.J. (2022). _The Theory and Practice of Item Response Theory_. Guilford Press.
+- Debelak, R., Strobl, C., Zeigenfuse, M. D. (2022). _An Introduction to the Rasch Model with Examples in R_. CRC Press.
+- Gelman, A., Hill, J., Vehtari, A. (2023). [Regression and Other Stories](https://users.aalto.fi/~ave/ROS.pdf). 
+
+# Metodologia Didattica: Flip Teaching
+
+Durante questo Laboratorio, adotteremo la metodologia didattica nota come flipped teaching. Questa modalità prevede due fasi distinte: nella prima fase, gli studenti studieranno autonomamente i materiali didattici assegnati, disponibili sul sito dedicato, prima di ogni incontro. Nella seconda fase, durante gli incontri in presenza, gli studenti parteciperanno ad attività di discussione, esercitazioni e approfondimenti sugli argomenti trattati. Questo approccio permette agli studenti di consolidare e approfondire i concetti appresi, favorendo un apprendimento esperienziale.
+
+Per ogni incontro del Laboratorio, gli studenti dovranno prepararsi svolgendo il problema assegnato. Durante gli incontri del Laboratorio, sarà richiesta la loro partecipazione attiva alla discussione, e sarà necessario avere un computer per svolgere attività pratiche in R. Questo creerà un ambiente di apprendimento interattivo e promuoverà la risoluzione cooperativa dei problemi.
+
+La suddivisione degli studenti in gruppi e la valutazione delle attività di gruppo favoriranno lo sviluppo delle capacità di lavoro in team. Inoltre, questo offrirà agli studenti l'opportunità di supportarsi reciprocamente, facilitando l'apprendimento. Fornire chiarimenti ai membri del proprio gruppo che hanno difficoltà è un potente strumento per consolidare la propria preparazione.
+
+## Forum Moodle
+
+Il Forum Moodle è una risorsa essenziale per la preparazione dell'esame. Gli studenti possono utilizzare questo strumento per porre domande o chiarire eventuali dubbi sul materiale assegnato. Sebbene io intervenga occasionalmente per fornire chiarimenti, il focus principale sarà sulla partecipazione attiva degli studenti. Gli studenti saranno incoraggiati a rispondere ai dubbi dei loro compagni, promuovendo la discussione e lo scambio di idee. Questo approccio favorisce l'apprendimento cooperativo e permette agli studenti di consolidare le proprie conoscenze attraverso il confronto critico con i propri colleghi.
+

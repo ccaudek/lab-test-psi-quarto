@@ -1,0 +1,11 @@
+---
+title: "Staff"
+---
+
+
+## 👨‍🏫 Informazioni sul docente
+
+[Corrado Caudek](https://www.unifi.it/p-doc2-2008-0-A-2c2a342f3b29-1.html)<br>
+**Email**: corrado.caudek(at)unifi(dot)it<br>
+**Website**: [caudeklab](https://ccaudek.github.io/caudeklab)</br>
+

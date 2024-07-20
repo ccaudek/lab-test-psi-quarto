@@ -1,0 +1,62 @@
+---
+title: "Syllabus"
+---
+
+# Descrizione dell'insegnamento
+
+Questo laboratorio, offerto all'interno di un corso di laurea magistrale, ha l'obiettivo di sviluppare competenze teorico-pratiche relative alla costruzione e validazione di reattivi psicologici. Il laboratorio sarà strutturato in una serie di esercitazioni pratiche che illustreranno le varie fasi necessarie per la costruzione e validazione di questi strumenti.
+
+## Obiettivi di Apprendimento
+
+Dopo aver completato con successo questo Laboratorio, gli studenti saranno in grado di:
+
+- Utilizzare il software R per l'analisi dei dati psicometrici.
+- Riconoscere variazioni, distribuzioni e pattern di risposta insoliti negli item.
+- Valutare la coerenza e la formazione di scale unidimensionali o multidimensionali.
+- Analizzare la misurazione additiva e la difficoltà degli item.
+- Applicare concetti di algebra lineare nelle analisi psicometriche.
+- Determinare il numero ottimale di dimensioni e la struttura di un test psicometrico.
+- Valutare l'affidabilità delle scale e l'associazione degli item con il punteggio totale.
+- Analizzare la distribuzione dei punteggi totali e identificare effetti di soffitto o pavimento.
+- Utilizzare modelli di equazioni strutturali (SEM) per la validazione dei costrutti.
+- Sviluppare e presentare progetti sulla validazione di reattivi psicometrici.
+
+## Metodologia Didattica
+
+Il laboratorio prevede lezioni teoriche integrate con esercitazioni pratiche. Gli studenti utilizzeranno software statistici avanzati per applicare le tecniche apprese durante le lezioni.
+
+
+## Valutazione
+
+La valutazione degli studenti si baserà su esercitazioni pratiche, progetti di gruppo e una prova finale che includerà sia aspetti teorici che pratici.
+
+## Prerequisiti
+
+È richiesta una conoscenza di base dell'analisi statistica applicata alla psicologia, inclusi i concetti fondamentali della teoria delle probabilità e del modello di regressione lineare. Si consiglia di consultare i corsi di [Psicometria](https://ccaudek.github.io/ds4p/intro.html) e di [Testing Psicologico](https://ccaudek.github.io/psy_test/intro.html).
+
+## Ulteriori informazioni
+
+### Ricevimento
+
+Data la mia presenza in diversi corsi durante il semestre, non sarà possibile rispondere alle domande in aula dopo le lezioni. Tuttavia, sono disponibile tramite Moodle per organizzare incontri di gruppo su Google Meet, per rispondere alle vostre domande e fornire chiarimenti.
+
+### Comportamento in aula
+
+La partecipazione attiva e il rispetto reciproco sono fondamentali. Incoraggio gli studenti a contribuire alle discussioni, offrendo punti di vista differenti e mettendo in discussione le idee degli altri, comprese le mie, in modo rispettoso e costruttivo.
+
+### Norme relative all’uso della posta elettronica
+
+Prima di inviare una richiesta via e-mail, consultate il sito web del corso per verificare se le informazioni cercate sono già disponibili. Per organizzare un incontro, inviatemi un messaggio tramite Moodle. Preferisco pianificare incontri di gruppo, ma possiamo concordare appuntamenti individuali se necessario.
+
+### Politica sulla disonestà accademica
+
+L'integrità accademica è essenziale. Qualsiasi forma di comportamento disonesto, come l'uso di aiuti non autorizzati o il plagio, sarà sanzionata secondo le politiche accademiche in vigore.
+
+### Politica sulle disabilità
+
+Gli studenti con bisogni educativi speciali sono invitati a comunicarmelo in modo confidenziale il prima possibile. Rispetto pienamente il diritto alla privacy in materia.
+
+### Considerazioni finali
+
+Il successo nel corso dipende principalmente dall'impegno degli studenti. Non esitate a chiedere aiuto ai compagni di classe o a me per chiarimenti su ciò che non avete compreso.
+

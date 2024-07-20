@@ -1,0 +1,45 @@
+project:
+  type: website
+
+website:
+  site-url: https://ccaudek.github.io/lab-test-psi-quarto/
+  sidebar:
+    style: docked
+    title: "B033300"
+    logo: assets/icon_course.jpeg
+    tools:
+      - icon: github
+        href: https://github.com/ccaudek/lab-test-psi-quarto
+    contents:
+      - href: index.qmd
+        text: Home / Schedule
+      - href: syllabus.qmd
+        text: Syllabus
+      - href: study_method.qmd
+        text: Materiali didattici
+      - href: exam.qmd
+        text: Esame
+      - href: staff.qmd
+        text: Docente
+      - href: calendar.qmd
+        text: Calendario
+      - section: "Sessioni"
+        contents:
+          - units/unit0.qmd
+          - units/unit1.qmd
+          - units/unit2.ipynb
+          - units/unit3.qmd
+      - href: data.qmd
+        text: Datasets
+      - href: license.qmd
+        text: Licenza
+          
+
+format:
+  html:
+    theme: cosmo
+    css: assets/styles.css
+    toc: true
+
+
+
