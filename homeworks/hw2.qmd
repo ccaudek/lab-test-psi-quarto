@@ -1,0 +1,18 @@
+---
+title: "NIRT per gli item FAI"
+bibliography: ../references.bib
+format:
+  html:
+    code-fold: show
+    code-tools: true
+---
+
+
+Utilizzando le funzionalità degli script messi a disposizione da @dima2018scale, affrontare i seguenti problemi usando gli item della scala FAI.
+
+- Gli item formano una singola scala?
+- Quanti e quali rispondenti hanno modelli di risposta idiosincratici?
+- La scala è uni- o multidimensionale?
+- Gli item sono associati solo tramite la dimensione latente?
+- La probabilità di approvare un'opzione di risposta "corretta" aumenta con l'aumento dei livelli della dimensione latente?
+- L'ordine di "difficoltà/intensità" degli item è lo stesso (invariante) a tutti i livelli della dimensione latente?

@@ -6,9 +6,9 @@ format:
     code-tools: true
 ---
 
-Ci sono tantissime risorse in rete che fornisco un'introduzione a R. Per le funzionalità di base, consiglio [An Introduction to R](https://intro2r.com). Per un'introduzione alle funzionalità di tidyverse, consiglio [Introduction to R with Tidyverse](https://introduction-r-tidyverse.netlify.app).
+Ci sono moltissime risorse online che offrono un'introduzione a R. Per le funzionalità di base, consiglio [An Introduction to R](https://intro2r.com). Per un'introduzione alle funzionalità del tidyverse, consiglio [Introduction to R with Tidyverse](https://introduction-r-tidyverse.netlify.app).
 
-In questo laboratorio useremo Quarto che consente di creare dei notebook che contengono sia testo sia codice. Questo sito web è stato costruito usando Quarto. Una delle interessanti proprietà di Quarto è che permette di avere codice R e codice Python nello stesso notebook. Per un'introduzione, la risorsa migliore è il sito di [Quarto](https://quarto.org).
+In questo laboratorio utilizzeremo [Quarto](https://quarto.org), che permette di creare notebook contenenti sia testo che codice. Questo sito web è stato realizzato utilizzando Quarto. Una delle caratteristiche interessanti di Quarto è che consente di utilizzare sia codice R che codice Python nello stesso notebook.
 
 # File `qmd`
 

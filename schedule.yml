@@ -20,23 +20,20 @@
         - type: "Homework"
           id: "1A"
           name: Distribuzione normale, asimmetria, curtosi
-          href: "./homeworks/hw1.html"
+          href: "./homeworks/hw1a.html"
         - type: "Homework"
           id: "1B"
           name: Step 1 (Dima, 2018)
-          href: "https://berkeley.edu"
+          href: "./homeworks/hw1b.html"
 - week: 2
   days:
     - date: "Marzo 10"
       items:
         - type: "Lecture"
           id: "2"
-          name: Pandas 1
+          name: Scale di Mokken
           href: "./units/unit2.html"
-        - type: "Participation"
+        - type: "Homework"
           id: "2"
-          name: Lecture Participation 2
-          href: "./units/unit3.html"
-          auxil:
-            id: "Note 2"
-            href: "https://berkeley.edu"
+          name: Analisi NIRT per gli item FAI
+          href: "./homeworks/hw2.html"

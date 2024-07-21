@@ -1,5 +1,5 @@
 ---
-title: "S1: Statistiche descrittive"
+title: "Statistiche descrittive"
 format:
   html:
     code-fold: show
@@ -111,5 +111,11 @@ glimpse(df)
 ```
 
 Il data frame `df` contiene i dati che possono essere utilizzati per la costruzione e validazione del questionario in oggetto.
+
+Esporto il DataFrame in un file CSV.
+
+```{r}
+rio::export(df, here::here("data", "cleaned_data.csv"))
+```
 
 
